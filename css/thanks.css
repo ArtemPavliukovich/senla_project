@@ -1,0 +1,136 @@
+.thanks {
+  background: #F6F6F6;
+  padding: 119px 0 101px 0;
+  background-size: cover;
+  background-position-y: center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.thanks__elem {
+  width: 357px;
+  height: 521px;
+  background: #322D1E;
+  mix-blend-mode: soft-light;
+}
+
+.thanks__elem-circle {
+  width: 521px;
+  height: 521px;
+  border-radius: 50%;
+  margin-left: 94px;
+  background: #322D1E;
+}
+
+.thanks__title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  position: absolute;
+  top: 303px;
+  left: 134px;  
+}
+
+.thanks__title::after {
+  position: absolute;
+  content: "";
+  width: 89px;
+  height: 89px;
+  bottom: -8px;
+  right: -96px;
+  background: url('../img/icon/step.svg');
+}
+
+@media screen and (max-width: 1269px) {
+  .thanks {padding: 89px 0 76px 0;}
+
+  .thanks__elem {
+    width: 268px;
+    height: 390px;
+  }
+
+  .thanks__elem-circle {
+    width: 390px;
+    height: 390px;
+    margin-left: 70.5px;
+  }
+
+  .thanks__title {
+    font-size: 48px;
+    line-height: 58px;
+    top: 227px;
+    left: 100px;
+  }
+
+  .thanks__title::after {
+    width: 67px;
+    height: 67px;
+    bottom: -5px;
+    right: -70px;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .thanks {padding: 67px 0 57px 0;}
+
+  .thanks__elem {
+    width: 200px;
+    height: 292px;
+  }
+
+  .thanks__elem-circle {
+    width: 292px;
+    height: 292px;
+    margin-left: 53px;
+  }
+
+  .thanks__title {
+    font-size: 36px;
+    line-height: 44px;
+    top: 170px;
+    left: 74px;
+  }
+
+  .thanks__title::after {
+    width: 50px;
+    height: 50px;
+    bottom: -3px;
+    right: -50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks {padding: 74px 0 74px 0;}
+
+  .thanks__elem {
+    width: 146px;
+    height: 212px;
+  }
+
+  .thanks__elem-circle {
+    width: 212px;
+    height: 212px;
+    margin-left: 38px;
+  }
+
+  .thanks__title {
+    font-size: 30px;
+    line-height: 36px;
+    top: 142px;
+    left: 30px;
+  }
+
+  .thanks__title::after {
+    width: 42px;
+    height: 42px;
+    right: -40px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .thanks {padding: 39px 0 16px 0;}
+
+  .thanks__title {top: 107px;}
+}

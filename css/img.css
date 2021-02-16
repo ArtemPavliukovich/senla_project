@@ -1,0 +1,31 @@
+/* В этом файле будем подключать картинки для разных разрешений */
+.header__fon {background-image: url('../img/yellow_dog1.jpg');}
+@media screen and (max-width: 1269px) {.header__fon {background-image: url('../img/yellow_dog2.jpg');}}
+@media screen and (max-width: 1023px) {.header__fon {background-image: url('../img/yellow_dog3.jpg');}}
+@media screen and (max-width: 767px) {.header__fon {background-image: url('../img/yellow_dog4.jpg');}}
+
+.header__fon-cat {background-image: url('../img/cat_fon1.png');}
+@media screen and (max-width: 1269px) {.header__fon-cat {background-image: url('../img/cat_fon2.png');}}
+@media screen and (max-width: 1023px) {.header__fon-cat {background-image: url('../img/cat_fon3.png');}}
+@media screen and (max-width: 767px) {.header__fon-cat {background-image: url('../img/cat_fon4.png');}}
+
+.promo__img-dog {background-image: url('../img/dog1.png');}
+@media screen and (max-width: 1269px) {.promo__img-dog {background-image: url('../img/dog1_2.png');}}
+@media screen and (max-width: 1023px) {.promo__img-dog {background-image: url('../img/dog1_3.png');}}
+@media screen and (max-width: 767px) {.promo__img-dog {background-image: url('../img/dog1_4.png');}}
+
+.promo__img-cat {background-image: url('../img/cat1.png');}
+@media screen and (max-width: 1269px) {.promo__img-cat {background-image: url('../img/cat1_2.png');}}
+@media screen and (max-width: 1023px) {.promo__img-cat {background-image: url('../img/cat1_3.png');}}
+@media screen and (max-width: 767px) {.promo__img-cat {background-image: url('../img/cat1_4.png');}}
+
+.action__volunteer-img {background-image: url('../img/dog2.png');}
+@media screen and (max-width: 1269px) {.action__volunteer-img {background-image: url('../img/dog2_2.png');}}
+@media screen and (max-width: 1023px) {.action__volunteer-img {background-image: url('../img/dog2_3.png');}}
+@media screen and (max-width: 767px) {.action__volunteer-img {background-image: url('../img/dog2_4.png');}}
+
+.thanks {background-image: url('../img/dog_fon1.jpg');}
+@media screen and (max-width: 1269px) {.thanks {background-image: url('../img/dog_fon2.jpg');}}
+@media screen and (max-width: 1023px) {.thanks {background-image: url('../img/dog_fon3.jpg');}}
+@media screen and (max-width: 767px) {.thanks {background-image: url('../img/dog_fon4.jpg');}}
+@media screen and (max-width: 639px) {.thanks {background-image: url('../img/dog_fon5.jpg');}}

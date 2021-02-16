@@ -1,0 +1,249 @@
+.life {position: relative;}
+
+.life__fon {
+  max-width: 1366px;
+  padding-left: 5px;
+  width: 100%;
+  left: 0;
+  top: 210px;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  z-index: -1;
+}
+
+.life__title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 83px;
+  margin-bottom: 2px;
+}
+
+.life__box {
+  width: calc(100% / 12 * 7 - 20px);
+  margin-left: 10px;
+}
+
+.life__flex-direction {flex-direction: column;}
+
+.life__we {
+  line-height: 18px;
+  font-weight: 300;
+  color: #6B6B6B;
+  margin-bottom: 12px;
+}
+
+.life__our-target {
+  font-weight: 600;
+  color: #474747;
+  margin-bottom: 43px;
+}
+
+.life__time {
+  line-height: 29px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #C78100;
+  width: calc(100% / 12 * 5 - 20px - ((100% / 12 - 20px) / 2) + 1px);
+  margin-left: 10px;
+}
+
+.life__button-fon {
+  width: 183px;
+  margin: 44px 0 272px 0;
+}
+
+.life__button {width: 173px;}
+
+.life__fon > img {display: block;}
+
+.life__i-am {
+  width: 599px;
+  height: 192px;
+}
+
+.life__best {
+  width: 534px;
+  height: 107px;
+}
+
+.life__friend {
+  width: 474px;
+  height: 107px;
+  margin-left: 15.5%;
+}
+
+@media screen and (max-width: 1269px) {
+  .life__title {
+    font-size: 64px;
+    line-height: 77px;
+  }
+
+  .life__we {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .life__our-target {
+    font-size: 14px;
+    min-height: 60px;
+  }
+
+  .life__time {
+    font-size: 20px;
+    line-height: 24px;
+    min-height: 120px;
+  }
+
+  .life__i-am {
+    width: 445px;
+    height: 143px;
+  }
+
+  .life__best {
+    width: 396px;
+    height: 79px;
+  }
+
+  .life__friend {
+    width: 352px;
+    height: 79px;
+    margin-left: 21.5%;
+  }
+
+  .life__fon {top: 187px}
+
+  .life__button-fon {margin-bottom: 107px;}
+}
+
+@media screen and (max-width: 1023px) {
+  .life__title {
+    font-size: 42px;
+    line-height: 51px;
+    margin-bottom: 6px;
+  }
+
+  .life__we {margin-bottom: 8px;}
+
+  .life__time {
+    font-size: 16px;
+    line-height: 19px;
+    min-height: auto;
+  }
+
+  .life__our-target {margin-bottom: 36px;}
+
+  .life__button-fon {margin: 44px 0 42px 0;}
+
+  .life__i-am {
+    width: 341px;
+    height: 109px;
+  }
+
+  .life__best {
+    width: 304px;
+    height: 61px;
+  }
+
+  .life__friend {
+    width: 270px;
+    height: 61px;
+    margin-left: 151px;
+  }
+
+  .life__fon {top: 117px;}
+}
+
+@media screen and (max-width: 767px) {
+  .life__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 0;
+  }
+
+  .life__box {
+    width: calc(100% / 6 * 3 - 16px);
+    margin-left: calc(100% / 6 + 8px);
+  }
+
+  .life__we {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 20px;
+  }
+
+  .life__our-target {
+    margin-bottom: 152px;
+    min-height: 100px;
+  }
+
+  .life__time {
+    width: calc(100% / 6 * 4 - 16px);
+    margin-left: calc(100% / 6 + 8px);
+    text-align: center;
+  }
+
+  .life__i-am {
+    width: 310px;
+    height: 100px;
+  }
+
+  .life__best {
+    width: 277px;
+    height: 56px;
+  }
+
+  .life__friend {
+    width: 246px;
+    height: 56px;
+  }
+
+  .life__button-fon {
+    width: 194px;
+    margin: 20px auto 47px auto;
+  }
+
+  .life__button {width: 186px;}
+
+  .life__fon {top: 102px;}
+}
+
+@media screen and (max-width: 639px) {
+  .life__box {
+    width: calc(100% / 6 * 5 - 16px);
+    margin-left: 0;
+  }
+
+  .life__we {min-height: 28px;}
+
+  .life__our-target {
+    width: calc(60% + 16px);
+    margin-bottom: 92px;
+    min-height: 160px;
+  }
+
+  .life__time {
+    width: calc(100% - 16px);
+    margin-left: 0;
+  }
+
+  .life__i-am {
+    width: 175px;
+    height: 56px;
+  }
+
+  .life__best {
+    width: 156px;
+    height: 31px;
+  }
+
+  .life__friend {
+    width: 138px;
+    height: 31px;
+    margin-left: 63px;
+  }
+
+  .life__fon {top: 174px;}
+
+  .life__button-fon {margin: 20px auto 28px auto;}
+}

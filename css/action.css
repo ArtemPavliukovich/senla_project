@@ -1,0 +1,260 @@
+.action {padding: 46px 0 160px 0;}
+
+.action__box {
+  transform: translateX(10px);
+  width: calc(100% / 12 * 8);
+  padding-left: calc(100% / 12);
+}
+
+.action__title-food {margin: 56px 0 28px 0;}
+.action__title-med {margin: 44px 0 28px 0;}
+.action__title-things {margin: 46px 0 28px 0;}
+.action__title-auto {margin: 45px 0 24px 0;}
+
+.action__list-food li {margin-bottom: 5px;}
+.action__list-things li {margin-bottom: 5.5px;}
+.action__list-food li:last-of-type,
+.action__list-things li:last-of-type {margin: 0;}
+
+.action__need-us {line-height: 132%;}
+
+.action__icon-food {
+  width: 127px;
+  height: 100px;
+}
+
+.action__icon-delivery {
+  width: 118px;
+  height: 115px;
+}
+
+.action__icon-care {
+  width: 82px;
+  height: 106px;
+}
+
+.action__how-can {color: #6B6B6B;}
+
+.action__button-underline {margin: 18px 0 78px 0;}
+
+.action__button-fon-gold {margin: 24px 0 80px 0;}
+
+.action__position-with-this-wrapper {position: relative;}
+
+.action__volunteer-box-img {
+  height: 521px;
+  width: calc(45% - 255px);
+  background: #FFC41E;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.action__volunteer-img {
+  display: inline-block;
+  width: 521px;
+  height: 521px;
+  background: #FFC41E;
+  background-size: cover;
+  border-top: 31px;
+  border-right: 23px;
+  border-bottom: 26px;
+  border-left: 34px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #FFC41E;
+  position: absolute;
+  top: 0;
+  right: -264px;
+}
+
+.action__volunteer-info {
+  width: calc(100% / 12 * 5 - 20px);
+  margin-right: calc(100% / 12 + 10px);
+}
+
+.action__volunteer-info-title {margin: 113px 0 24px 0;}
+
+.action__button-volunteer {margin: 24px 0 0 0;}
+
+.action__volunteer-info-item {line-height: 140%;}
+
+.action__volunteer-info-item:first-of-type {margin-bottom: 5px;}
+
+@media screen and (max-width: 1269px) {
+  .action {padding: 65px 0 8% 0;}
+
+  .action__icon-food {
+    width: 88px;
+    height: 68px;
+  }
+
+  .action__button-underline {margin: 16px 0 62px 0;}
+
+  .action__icon-delivery {
+    width: 82px;
+    height: 80px;
+  }
+
+  .action__title-auto {margin: 27px 0 24px 0;}
+
+  .action__button-fon-gold {margin: 38px 0 82px 0;}
+
+  .action__icon-care {
+    width: 56px;
+    height: 75px;
+  }
+
+  .action__volunteer-box-img {
+    top: 49px;
+    height: 390px;
+    width: calc(45% - 195px);
+  }
+
+  .action__volunteer-img {
+    width: 390px;
+    height: 390px;
+    border-top: 23px;
+    border-right: 16px;
+    border-bottom: 19px;
+    border-left: 26px;
+    border-style: solid;
+    border-color: #FFC41E;
+    right: -195px;
+  }
+
+  .action__volunteer-info-title {margin: 50px 0 24px 0;}
+}
+
+@media screen and (max-width: 1023px) {
+  .action {padding: 42px 0 8% 0;}
+
+  .action__icon-food {
+    width: 54px;
+    height: 44px;
+  }
+
+  .action__title-food {margin: 30px 0 24px 0;}
+  .action__title-med,
+  .action__title-things {margin: 40px 0 24px 0;}
+
+  .action__box {
+    width: calc(100% / 12 * 8 + 20px);
+    padding-left: 0;
+  }
+
+  .action__button-underline {margin: 16px 0 60px 0;}
+
+  .action__icon-delivery {
+    width: 52px;
+    height: 50px;
+  }
+
+  .action__button-fon-gold {margin: 38px 0 60px 0;}
+
+  .action__icon-care {
+    width: 35px;
+    height: 47px;
+  }
+
+  .action__volunteer-box-img {
+    height: 300px;
+    width: calc(45% - 152px);
+    top: 107px;
+  }
+
+  .action__volunteer-img {
+    width: 300px;
+    height: 300px;
+    border-top: 18px;
+    border-right: 13px;
+    border-bottom: 15px;
+    border-left: 20px;
+    border-style: solid;
+    border-color: #FFC41E;
+    right: -148px;
+  }
+
+  .action__volunteer-info {
+    width: calc(100% / 12 * 5 - 20px);
+    margin-right: calc(100% / 12 + 10px);
+  }
+
+  .action__volunteer-info-title {margin: 42px 0 24px 0;}
+}
+
+@media screen and (max-width: 767px) {
+  .action {padding: 37px 0 32px 0;}
+
+  .action__icon-food {
+    width: 46px;
+    height: 37px;
+  }
+
+  .action__title-food {margin: 29px 0 16px 0;}
+  .action__title-med,
+  .action__title-things {margin: 40px 0 16px 0;}
+  .action__title-auto {
+    margin: 26px 0 16px 0;
+    text-align: center;
+  }
+
+  .action__button-underline {
+    text-align: center;
+    margin: 16px 0 42px 0;
+  }
+
+  .action__icon-delivery {
+    width: 44px;
+    height: 43px;
+  }
+
+  .action__button-fon-gold {margin: 16px auto 43px auto;}
+
+  .action__box {
+    width: calc(100% / 6 * 4 - 16px);
+    transform: translateX(0);
+  }
+
+  .action__icon-care {
+    width: 30px;
+    height: 40px;
+  }
+
+  .action__volunteer-info {
+    width: calc(100% / 6 * 4 - 16px);
+    margin-right: 0;
+  }
+
+  .action__volunteer-info-title {
+    margin: 263px 0 16px 0;
+    text-align: center;
+  }
+
+  .action__button-volunteer {margin: 16px auto 0 auto;}
+
+  .action__volunteer-box-img {
+    height: 212px;
+    width: calc(61% - 105px);
+    top: 27px;
+  }
+
+  .action__volunteer-img {
+    width: 212px;
+    height: 212px;
+    border-top: 13px;
+    border-right: 9px;
+    border-bottom: 11px;
+    border-left: 15px;
+    border-style: solid;
+    border-color: #FFC41E;
+    right: -105px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .action__volunteer-box-img {width: calc(70% - 105px);}
+
+  .action__volunteer-info,
+  .action__box {width: calc(100% - 16px);}
+}

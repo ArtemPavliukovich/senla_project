@@ -1,0 +1,115 @@
+.finance {
+  background: #FFFFFF;
+  padding: 46px 0 39px 0;
+}
+
+.finance__title {
+  margin: 61px 0 32px 0;
+  text-align: center;
+}
+
+.finance__icon {
+  width: 131px;
+  height: 94px;
+}
+
+.finance__icon-style {background: white;}
+
+.finance__title-description {
+  width: calc(100% / 12 * 10 - 20px);
+  padding: 0 calc(100% / 12);
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #6B6B6B;
+  margin-bottom: 40px;
+}
+
+.finance__info-item {
+  width: calc(100% / 12 * 4);
+  margin-left: calc(100% / 12);
+  transform: translateX(-10px);
+}
+
+.finance__info-title {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.finance__currency {font-weight: 700;}
+
+.finance__info-list {
+  margin-bottom: 20px;
+  line-height: 176%;
+}
+
+@media screen and (max-width: 1269px) {
+  .finance {padding: 45px 0 24px 0;}
+
+  .finance__icon {
+    width: 89px;
+    height: 64px;
+  }
+
+  .finance__title {margin: 55px 0 16px 0;}
+
+  .finance__title-description {font-size: 16px;}
+
+  .finance__info-title {font-size: 24px;}
+
+  .finance__info-list {font-size: 14px;}
+}
+
+@media screen and (max-width: 1023px) {
+  .finance {padding: 23px 0 16px 0;}
+
+  .finance__icon {
+    width: 56px;
+    height: 40px;
+  }
+
+  .finance__title {margin: 30px 0 16px 0;}
+
+  .finance__info-item {width: calc(100% / 12 * 5);}
+
+  .finance__info-list-margin {margin-bottom: 12px;}
+}
+
+@media screen and (max-width: 767px) {
+  .finance__icon {
+    width: 47px;
+    height: 34px;
+  }
+
+  .finance__title-description {
+    width: calc(100% / 6 * 4 - 16px);
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .finance__info-item {
+    width: calc(100% / 6 * 4 - 16px);
+    margin-left: 0;
+    transform: translateX(0);
+    text-align: center;
+  }
+
+  .finance__info-title {margin-bottom: 16px;}
+
+  .finance__info-list {
+    margin-bottom: 16px;
+    text-align: left;
+  } 
+  
+  .finance__button {margin: 0 auto 32px auto;}
+}
+
+@media screen and (max-width: 639px) {
+  .finance__title-description,
+  .finance__info-item {width: calc(100% - 16px);}
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши подопечные</title>
+    <link rel="shortcut icon" href="img/icon/home.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/pets/reset.css">
+    <link rel="stylesheet" href="css/pets/font.css">
+    <link rel="stylesheet" href="css/pets/general.css">
+    <link rel="stylesheet" href="css/pets/header.css">
+    <link rel="stylesheet" href="css/pets/pets.css">
+    <link rel="stylesheet" href="css/pets/footer.css">
+    <link rel="stylesheet" href="css/pets/pet-info.css">
+    <link rel="stylesheet" href="css/pets/form.css">
+    <link rel="stylesheet" href="css/pets/preloader.css">
+  </head>
+  <body class="body">
+    <div class="pets__wrapper">
+      <header class="header">
+        <a href="index.html" class="go-back">
+          <span class="header__go-back-arrow"></span>
+          <span class="header__go-back">Вернуться назад</span>
+        </a>
+        <h1 class="title">Наши подопечные</h1>
+        <form method="POST" class="filter">
+          <div class="filter-value" tabindex="0">
+            <input type="text" class="filter-view-value" value="Коты и собаки" disabled>
+            <input type="radio" id="all_pet" class="display-none all_pet" value="Коты и собаки" name="pets" checked> 
+            <input type="radio" id="all_cat" class="display-none all_cat" value="Только коты" name="pets">
+            <input type="radio" id="all_dog" class="display-none all_dog" value="Только собаки" name="pets">
+            <div class="filter-value-item">
+              <label for="all_pet" class="filter-item all_pet">Коты и собаки</label>
+              <label for="all_cat" class="filter-item all_cat">Только коты</label>
+              <label for="all_dog" class="filter-item all_dog">Только собаки</label>
+            </div>
+          </div>
+        </form>
+      </header>
+      <main class="all-animals"></main>
+    </div>
+    <footer class="footer wrapper">
+      <div class="flex-layout justify-content-space-between">
+        <ul class="footer__list-one">
+          <li class="footer__list-one-item footer__list-one-first_item">
+            <a href="index.html" class="footer__link" id="home">Дом или передержка</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-second_item">
+            <a href="index.html" class="footer__link" id="finance">Финансовая поддержка</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-third_item">
+            <a href="index.html" class="footer__link" id="other-help">Корма, лекарства и другие вещи</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-fourth_item">
+            <a href="index.html" class="footer__link" id="auto">Автопомощь</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-fifth_item">
+            <a href="index.html" class="footer__link" id="volunteer">Волонтерство</a>
+          </li>
+        </ul>
+        <ul class="footer__list-two">
+          <li class="footer__list-two-item">
+            <a href="index.html" class="footer__link" id="about">О нас</a>  
+          </li>
+          <li class="footer__list-two-item">
+            <a href="index.html" class="footer__link" id="contacts">Контакты</a>  
+          </li>
+        </ul>
+        <p class="footer__we">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</p>
+      </div>
+    </footer>
+    <div id="disable-fon" class="display-none">
+      <form class="take-home form-box display-none" method="POST" tabindex="1">
+        <div class="wrapper-form">
+          <h3 class="form-title">Забрать домой</h3>
+          <svg class="close-form">
+            <use xlink:href="#close-form"></use>
+          </svg>
+          <div class="form-pet">
+            <img src="#" alt="pet photo" class="form-pet-photo">
+            <div>
+              <p class="form-pet-name"></p>
+              <p class="form-pet-age"></p>
+            </div>
+          </div>
+          <p class="form-petition-info">
+            Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца.
+          </p>
+          <div class="form-input-box">
+            <input type="text" name="name" class="form-input-text name" 
+            placeholder="Фамилия и имя" autocomplete="off" tabindex="2">
+            <label class="form-label display-none">Фамилия и имя</label>
+          </div>
+          <div class="form-input-box form-box-mobile">
+            <input type="tel" name="mobile" class="form-input-text mobile" 
+            placeholder="Номер телефона" autocomplete="off" tabindex="3">
+            <label class="form-label display-none">Номер телефона</label>
+          </div>
+          <p class="mobile-status">Обязательное поле для заполнения</p>
+          <div class="form-input-box">
+            <textarea maxlength="500" class="form-textarea" placeholder="Замечания" 
+            autocomplete="off" tabindex="4"></textarea>
+            <label class="form-label display-none">Замечания</label>
+          </div>
+          <ul class="form-mobile-info">
+            <li>Если у вас есть вопросы, можете позвонить нам:</li>
+            <li>+375 (33) 6237879 Лена</li>
+            <li>+375 (29) 7877791 Ольга</li>
+            <li>+375 (29) 5837015 Рита</li>
+          </ul>
+          <div class="form-buttons">
+            <div class="form-button-fon-gold form-button-fon-disabled">
+              <button type="submit" class="form-button-gold form-button-disabled" tabindex="5">
+                Отправить заявку
+              </button>
+            </div>
+            <div class="button-fon button-fon-silver form-button-fon-silver">
+              <button type="button" class="button button-silver form-button-silver" tabindex="6">
+                Отмена
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="take-on-time form-box display-none" method="POST" tabindex="1">
+        <div class="wrapper-form">
+          <h3 class="form-title">Забрать на передержку</h3>
+          <svg class="close-form">
+            <use xlink:href="#close-form"></use>
+          </svg>
+          <div class="form-pet">
+            <img src="#" alt="pet photo" class="form-pet-photo">
+            <div>
+              <p class="form-pet-name"></p>
+              <p class="form-pet-age"></p>
+            </div>
+          </div>
+          <p class="form-petition-info">
+            Оставьте информацию о себе. Мы позвоним вам и договоримся, 
+            когда вы сможете забрать себе питомца на передержку.
+          </p>
+          <div class="form-input-box">
+            <input type="text" name="name" class="form-input-text name" 
+            placeholder="Фамилия и имя" autocomplete="off" tabindex="2">
+            <label class="form-label display-none">Фамилия и имя</label>
+          </div>
+          <div class="form-input-box form-box-mobile">
+            <input type="tel" name="mobile" class="form-input-text mobile" 
+            placeholder="Номер телефона" autocomplete="off" tabindex="3">
+            <label class="form-label display-none">Номер телефона</label>
+          </div>
+          <p class="mobile-status">Обязательное поле для заполнения</p>
+          <div class="form-input-box">
+            <textarea maxlength="500" class="form-textarea" placeholder="Замечания" 
+            autocomplete="off" tabindex="4"></textarea>
+            <label class="form-label display-none">Замечания</label>
+          </div>
+          <ul class="form-mobile-info">
+            <li>Если у вас есть вопросы, можете позвонить нам:</li>
+            <li>+375 (33) 6237879 Лена</li>
+            <li>+375 (29) 7877791 Ольга</li>
+            <li>+375 (29) 5837015 Рита</li>
+          </ul>
+          <div class="form-thanks">
+            <p >
+              Наши волонтеры будут активно искать будущий дом хвостику, пока вы помогаете нам с передержкой.
+            </p>
+            <p>Спасибо за помощь!</p>
+          </div>
+          <div class="form-buttons">
+            <div class="form-button-fon-gold form-button-fon-disabled">
+              <button type="submit" class="form-button-gold form-button-disabled" tabindex="5">
+                Отправить заявку
+              </button>
+            </div>
+            <div class="button-fon button-fon-silver form-button-fon-silver">
+              <button type="button" class="button button-silver form-button-silver" tabindex="6">
+                Отмена
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="ok">
+        <p class="ok__info">Успешно отправлено</p>
+        <div class="ok__bg"></div>
+      </div>
+      <div class="pet-info display-none" tabindex="1">
+        <svg class="close-pet-info" tabindex="4">
+          <use xlink:href="#close-form"></use>
+        </svg>
+        <p class="pet-name"></p>
+        <p class="pet-age"></p>
+        <div class="pet-descriptions"></div>
+        <div class="pet-images"></div>
+        <div class="pet-button">
+          <a href="" class="button-fon button-fon-gold pet-info-button-fon-gold" id="take-home_two" tabindex="2">
+            <span class="button button-gold pet-info-button-gold">
+              Забрать домой
+            </span>
+          </a>
+          <a href="" class="button-fon button-fon-silver pet-info-button-fon-silver" id="take-on-time_two" tabindex="3">
+            <span class="button button-silver pet-info-button-silver">
+              Забрать на передержку
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="preloader">
+      <svg id="svg-sprite">
+        <symbol id="paw" viewBox="0 0 249 209.32">
+          <ellipse cx="27.917" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
+          <ellipse cx="84.75" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
+          <ellipse cx="162" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
+          <ellipse cx="221.083" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
+          <path stroke-width="0" d="M43.98 165.39s9.76-63.072 76.838-64.574c0 0 71.082-6.758
+          83.096 70.33 0 0 2.586 19.855-12.54 31.855 0 0-15.75 17.75-43.75-6.25 0 
+          0-7.124-8.374-24.624-7.874 0 0-12.75-.125-21.5 6.625 0 0-16.375 18.376-37.75 
+          12.75 0 0-28.29-7.72-19.77-42.86z"/>
+        </symbol>
+      </svg>
+      <div class="ajax-loader">
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+      </div>
+    </div>
+    <svg display="none">
+      <symbol viewBox="0 0 16 16" id="close-form">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99998 6.58579L14.3639 
+        0.221826L15.7782 1.63604L9.4142 8L15.7782 14.364L14.3639 15.7782L7.99998 
+        9.41421L1.63602 15.7782L0.22181 14.364L6.58577 8L0.22181 1.63604L1.63602 
+        0.221826L7.99998 6.58579Z" fill="#81869C"/>
+      </symbol>
+    </svg>
+    <script src="js/pets.js"></script>
+  </body>
+</html>

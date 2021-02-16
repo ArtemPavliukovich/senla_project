@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кузин дом</title>
+    <link rel="shortcut icon" href="img/icon/home.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/life.css">
+    <link rel="stylesheet" href="css/promo.css">
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="css/pets.css">
+    <link rel="stylesheet" href="css/finance.css">
+    <link rel="stylesheet" href="css/action.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/thanks.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/img.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/datepicker_custom.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/pet-info.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=11231cb4-9f02-4c84-a90c-52281eff0498&lang=ru_RU"></script>
+  </head>
+  <body class="body">
+    <header class="wrapper position-relative-off">
+      <div class="flex-layout">
+        <div class="header__wrapper">
+          <nav class="header__nav">
+            <div class="header__nav-burger display-none">
+              <div class="header__nav-burger-item"></div>
+            </div>
+            <ul class="header__nav-list">
+              <li class="header__list-item">
+                <a href="#help" class="header__link header__link--after-one">Как помочь</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#pets" class="header__link header__link--after-two">Подопечные животные</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#about" class="header__link header__link--after-three">О нас</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#contacts" class="header__link header__link--after-four">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="logo-display">
+            <a href="https://vk.com/animalsgrodno" target="_blank" 
+            class="header__fon-soc-network fon-soc-network">
+              <span class="link-soc-network header__link-soc-network">
+                <svg class="logo-vk header__logo-vk">
+                  <use xlink:href="#vk" filter="url(#filter0_d)"></use>
+                  <defs>
+                    <filter id="filter0_d" x="0" y="0" width="42" height="30" 
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" 
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                      <feOffset/>
+                      <feGaussianBlur stdDeviation="3"/>
+                      <feColorMatrix type="matrix" 
+                      values="0 0 0 0 0.821128 0 0 0 0 0.606722 0 0 0 0 0 0 0 0 1 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                  </defs>
+                </svg>
+              </span>
+            </a>
+            <a href="https://www.instagram.com/animalsgrodno/" target="_blank" 
+            class="header__fon-soc-network fon-soc-network">
+              <span class="link-soc-network header__link-soc-network">
+                <svg class="logo-insta header__logo-insta">
+                  <use xlink:href="#insta" filter="url(#filter1_d)"></use>
+                  <defs>
+                    <filter id="filter1_d" x="0" y="0" width="42" height="42" 
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" 
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                      <feOffset/>
+                      <feGaussianBlur stdDeviation="3"/>
+                      <feColorMatrix type="matrix" 
+                      values="0 0 0 0 0.821128 0 0 0 0 0.606722 0 0 0 0 0 0 0 0 1 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                  </defs>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__fon">
+        <div class="header__fon-cat"></div>
+      </div>
+    </header>
+    <main>
+      <section class="life">
+        <div class="wrapper">
+          <div class="flex-layout life__flex-direction">
+            <div class="life__box">
+              <h1 class="life__title">СПАСИ ЖИЗНЬ</h1>
+              <p class="life__we">Благотворительное общественное объединение защиты животных</p>
+              <p class="life__our-target">
+                Наша цель: помощь бездомным животным. Также мы поддерживаем хвостиков, 
+                которые оказались в пункте отлова и временного содержания в Гродно. 
+              </p>
+            </div>
+            <p class="life__time">
+              У животных, находящихся в пункте отлова и временного содержания бродячих 
+              животных, есть всего несколько дней до усыпления...
+            </p>
+            <a href="#help" class="button-fon button-fon-gold life__button-fon">
+              <span class="button button-gold life__button">Хочу помочь</span>
+            </a>
+          </div>
+        </div>
+        <div class="life__fon">
+          <img src="img/i-am.png" alt="I am" class="life__i-am">
+          <img src="img/best.png" alt="best" class="life__best">
+          <img src="img/friend.png" alt="friend" class="life__friend">
+        </div>
+      </section>
+      <section class="promo">
+        <div class="promo__image-box">
+          <div class="promo__img-dog">
+            <div class="promo__img-cat"></div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="flex-layout justify-content-flex-end">
+            <div class="promo__box">
+              <h2 class="promo__title">
+                Тут большие добрые сердца помогают жить маленьким сердечкам
+              </h2>
+              <p class="promo__descriprion">
+                Ежедневно в пункт временного содержания, путём отлова,
+                попадают безнадзорные собаки и коты. По закону, у животных
+                находящихся в САХе есть всего лишь несколько дней, чтобы
+                найти прежнего или обрести нового хозяина. В противном 
+                случае невостребованных животных ждёт УСЫПЛЕНИЕ! Здесь 
+                вы сможете найти своего как потерявшегося, так и нового 
+                верного друга! 
+              </p>
+              <p class="promo__descriprion">
+                Если нет возможности забрать хвостика, вы можете помочь 
+                нам финансово или другой материальной помощью. Еще нам 
+                всегда нужны добрые и отзывчивые люди - волонтеры, без 
+                вас очень трудно!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="help" id="help">
+        <h2 class="help__title">Как помочь?</h2>
+        <div class="help__variant wrapper">
+          <figure class="help__button">
+            <a href="#home" class="help__button-link">
+              <img src="img/icon/home.svg" alt="home" class="help__button-one">
+            </a>
+            <figcaption class="help__button-link-description" data-href="home">
+              Дать хвостику дом или взять на передержку
+            </figcaption>
+          </figure>
+          <figure class="help__button">
+            <a href="#finance" class="help__button-link">
+              <img src="img/icon/finance.svg" alt="help" class="help__button-two">
+            </a>
+            <figcaption class="help__button-link-description" data-href="finance">
+              Перечислить деньги в фонд помощи
+            </figcaption>
+          </figure>
+          <figure class="help__button">
+            <a href="#other-help" class="help__button-link">
+              <img src="img/icon/food.svg" alt="food" class="help__button-three">
+            </a>
+            <figcaption class="help__button-link-description" data-href="other-help">
+              Привезти корм, лекарства или другие вещи
+            </figcaption>
+          </figure>
+          <figure class="help__button">
+            <a href="#auto" class="help__button-link">
+              <img src="img/icon/delivery.svg" alt="delivery" class="help__button-four">
+            </a>
+            <figcaption class="help__button-link-description" data-href="auto">
+              Доставить животным еду или отвезти в больницу
+            </figcaption>
+          </figure>
+          <figure class="help__button">
+            <a href="#volunteer" class="help__button-link">
+              <img src="img/icon/care.svg" alt="care" class="help__button-five">
+            </a>
+            <figcaption class="help__button-link-description" data-href="volunteer">
+              Выгуливать, кормить, мыть или лечить хвостиков
+            </figcaption>
+          </figure>
+        </div>
+        <div class="icon">
+          <div class="icon-style">
+            <img src="img/icon/home.svg" alt="home" class="help__icon">
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="flex-layout justify-content-center">
+            <div class="help__home-item">
+              <h2 class="help__home-title" id="home">Дом и любовь для хвостика</h2>
+              <p>
+                Самая большая помощь - это спасти жизнь животному, забрать домой, 
+                или помочь хвостику с поиском дома. У наших подопечных очень мало 
+                времени. Рассказывайте друзья и и знакомым о наших хвостиках, 
+                возможно кому-то нужен будет именно такой друг.
+              </p>
+            </div>
+            <div class="help__home-item">
+              <h2 class="help__home-title">Передержка</h2>
+              <p>
+                Когда животных ждет скорое усыпление, очень важно найти ему дом. 
+                Но пока дом и новые или старые хозяева разыскиваются, хвостику 
+                нужно где-то жить. Вы можете забрать к себе домой животных на время. 
+                Волонтеры, в свою очередь, обязательно помогут с поиском нового дома.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>    
+      <section class="pet">
+        <h2 class="pet__title" id="pets">Наши подопечные</h2>
+        <div class="pet__button-all-pets">
+          <a href="pets.html" class="button-underline">
+            <span>
+              Посмотреть всех <span id="numberAllPets"></span>
+            </span>
+            <svg class="pet__button-arrow">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="pet__slider"></div>
+        <div class="pet__slider-item">
+          <div class="pet__slider-item-arrow-fon left" tabindex="0">
+            <svg class="pet__slider-item-arrow">
+              <use xlink:href="#control-elem"></use>
+            </svg>
+          </div>
+          <div>
+            <a href="" class="button-fon button-fon-gold pet__slider-button-fon-home" id="take-home">
+              <span class="button button-gold pet__slider-button-home">
+                Забрать домой
+              </span>
+            </a>
+            <a href="" class="button-fon button-fon-silver pet__slider-button-fon-overexposure" id="take-on-time">
+              <span class="button button-silver pet__slider-button-overexposure">
+                Забрать на передержку
+              </span>
+            </a>
+          </div>
+          <div class="pet__slider-item-arrow-fon right" tabindex="0"> 
+            <svg class="pet__slider-item-arrow">
+              <use xlink:href="#control-elem"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="flex-layout justify-content-center align-items-center">
+            <p class="pet__social-network-info">
+              Помочь быстрее пристроить хвостиков можно путем размещения наших постов 
+              у себя в соц сетях. Переходите на наши странички.
+            </p>
+            <div class="pet__social-network">
+              <a href="https://vk.com/animalsgrodno/" target="_blank" class="fon-soc-network pet__logo-vk">
+                <span class="link-soc-network">
+                  <svg class="logo-vk">
+                    <use xlink:href="#vk"></use>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://www.instagram.com/animalsgrodno/" target="_blank" class="fon-soc-network">
+                <span  class="link-soc-network">
+                  <svg class="logo-insta">
+                    <use xlink:href="#insta"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="finance">
+        <div class="icon">
+          <div class="icon-style finance__icon-style">
+            <img src="img/icon/finance.svg" alt="finance help" class="finance__icon">
+          </div>
+        </div>
+        <h2 class="finance__title" id="finance">Финансовая поддержка</h2>
+        <div class="wrapper">
+          <div class="flex-layout justify-content-center">
+            <p class="finance__title-description">
+              Такая помощь необходима для оплаты стерилизации, прививок, 
+              лечения больных животных, покупка корма и других жизненно 
+              необходимых вещей.
+            </p>
+            <div class="finance__info-item">
+              <h4 class="finance__info-title">Расчетный счет в Банке</h4>
+              <ul class="finance__info-list">
+                <li>БООЗЖ "СПАСИ ЖИЗНЬ"</li>
+                <li>УНП: 590375680</li>
+                <li class="bold"> 
+                  Текущий (расчетный) счет в BYN:
+                </li>
+                <li>BY13ALFA30152555460010270000</li>
+                <li>ЗАО 'Альфа-Банк'</li>
+                <li>БИК: ALFABY2X</li>
+              </ul>
+              <a href="https://express-pay.by/" target="_blank" 
+              class="button-fon button-fon-gold finance__button">
+                <span class="button button-gold">Быстрый платеж</span>
+              </a>
+            </div>
+            <div class="finance__info-item">
+              <h4 class="finance__info-title">Коробочки в городе</h4>
+              <ul class="finance__info-list finance__info-list-margin">
+                <li>Наши коробочки для пожертвований в г. Гродно:</li>
+                <li>1. Зоомаркет «Зообазар», ул. Комарова, 26а;</li>
+                <li>2. Учебный корпус ГГАУ, ул. Волковича, 1;</li>
+                <li>3. Парикмахерская «ПРИМАДОННА», ул. Гоголя, 11;</li>
+                <li>4. Зоомаркет «Зообазар» ул. Пушкина, 31а;</li>
+                <li>5. Гипермаркет «Евроопт», ул. Тимирязева, 8;</li>
+                <li>6. Гипермаркет «Евроопт», ул. Янки Купалы, 82А;</li>
+                <li>7. Фитнес-центр «АДРЕНАЛИН», ул. Подольная, д.37.</li>
+              </ul>
+              <a href="" class="button-underline show-map">
+                <span>Посмотреть на карте</span>
+              </a>
+            </div>
+          </div> 
+        </div>
+      </section>
+      <section class="action">
+        <div class="icon">
+          <div class="icon-style">
+            <img src="img/icon/food.svg" alt="finance help" class="action__icon-food">
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="flex-layout justify-content-center">
+            <div class="action__box">
+              <h2 class="action__title-food" id="other-help">Корма</h2>
+              <ul class="action__list-food">
+                <li>Можно помочь с покупкой и доставкой еды для хвостатых:</li>
+                <li>
+                  • Быстроразваривающиеся <span class="bold">крупы</span>: дроблёная гречка,
+                  овсянка, сечка, овсяные/гречневые хлопья, не требующие варки;
+                </li>
+                <li>
+                  • <span class="bold">Сухие и влажные корма</span> для собак и котов (кроме Рекс и Petboom);
+                </li>
+                <li>
+                  • <span class="bold">Фарш для собак</span>, "БОБИКИ" и др.
+                </li>
+                <li class="action__how-can">
+                  Вы можете помочь в приготовлении каш и их доставке!
+                </li>
+              </ul>  
+              <h2 class="action__title-med">Лекарства</h2>
+              <p class="action__need-us">
+                Нам необходимы препараты: <span class="bold">цефтриаксон</span> (флакон по 0,5 г); 
+                <span class="bold">новокаин</span> (раствор для инъекций); <span class="bold">
+                гискан; гамавит; катозал; антитокс фоспренил; энтеросгель</span> (паста); 
+                <span class="bold">препараты от глистов, блох, клещей, для заживления ран.</span>
+              </p>
+              <h2 class="action__title-things">Другие нужные вещи</h2>
+              <ul class="action__list-things">
+                <li>Для содержания животных всегда необходимы:</li>
+                <li>• Ошейники, поводки, намордники;</li>
+                <li>• Опилки и солома в любом количестве;</li>
+                <li>
+                  • Посуда для животных и для приготовления еды - миски, 
+                  кастрюли, ножи, черпаки и др.);
+                </li>
+                <li>• Теплые вещи, лежаки для утепления и уюта животных;</li>
+                <li>• Будки.</li>
+              </ul>
+              <div class="action__button-underline">
+                <a href="" class="button-underline" id="transfer">
+                  <span>Кому и куда передать?</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="icon">
+          <div class="icon-style">
+            <img src="img/icon/delivery.svg" alt="finance help" class="action__icon-delivery">
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="flex-layout justify-content-center">
+            <div class="action__box">
+              <h2 class="action__title-auto" id="auto">Автопомощь</h2>
+              <p>
+                Важной помощью будет транспортировка. Необходимо отвозить животных 
+                в ветеринарную клинику в сопровождении нашего волонтера или привозить 
+                еду. Если у вас есть автомобиль, немного свободного времени и доброе 
+                сердце - будем вам рады.
+              </p>
+              <a href="" class="button-fon button-fon-gold action__button-fon-gold" id="auto-help">
+                <span class="button button-gold">Оставить заявку</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="icon">
+          <div class="icon-style">
+            <img src="img/icon/care.svg" alt="finance help" class="action__icon-care">
+          </div>
+        </div>
+        <div class="action__position-with-this-wrapper">
+          <div class="action__volunteer-box-img">
+            <div class="action__volunteer-img"></div>
+          </div>
+          <div class="wrapper">
+            <div class="flex-layout justify-content-flex-end">
+              <div class="action__volunteer-info">
+                <h2 class="action__volunteer-info-title" id="volunteer">Волонтерство</h2>
+                <p class="action__volunteer-info-item">
+                  Катастрофически не хватает добрых людей, которые готовы поделиться 
+                  своим временем и окружить заботой животных. Много опыта не нужно, 
+                  все расскажем и поможем! Если Вы располагаете несколькими часами 
+                  свободного времени, проведите его с пользой! Главное условие - это 
+                  Ваше совершеннолетие и любовь к животным!
+                </p>
+                <p class="action__volunteer-info-item">
+                  Часто животным не хватает обычных прогулок и игры, они сидят 
+                  в клетках и грустят.
+                </p>
+                <a href="" class="button-fon button-fon-gold action__button-volunteer" id="volunteer-button">
+                  <span class="button button-gold">Оставить заявку</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <h2 class="news__title">Новости</h2>
+        <div class="wrapper">
+          <div class="flex-layout justify-content-center">
+            <div class="news__list">
+              <!-- ТУТ ДОЛЖЕН ДИНАМИЧЕСКИ ФОРМИРОВАТЬСЯ КОНТЕНТ -->
+              <div class="news__item">
+                <img class="news__item-img" src="img/database-img/news1.png" alt="news image">
+                <div class="news__item-text">
+                  <p>
+                    Срочно необходимо забрать собаку (мальчик) на передержку или насовсем. 
+                    Послезавтра его ждет усыпление. С кормом и доставкой поможем. В данный 
+                    момент находится в вольера САХа.
+                  </p>
+                  <p>
+                    Контактный телефон + 37529 58930557
+                  </p>
+                  <p>
+                    Спасите жизнь хвостику.
+                  </p>
+                </div>
+              </div>
+              <div class="news__item">
+                <img class="news__item-img" src="img/database-img/news2.png" alt="news image">
+                <div class="news__item-text">
+                  <p>
+                    Найдены бедомные щенки по улице Горького д.56.
+                  </p>
+                  <p>
+                    Сегодня будут перевезены в вольеры САХа. Если у вас есть возможность взять 
+                    на передержку или пристроить малышей - будем вам очень благодарны.
+                  </p>
+                </div>
+              </div>
+              <div class="news__button">
+                <a href="" class="button-underline">
+                  <span>Показать все новости</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about wrapper">
+        <h2 class="about__title" id="about">О нас</h2>
+        <div class="flex-layout justify-content-center">
+          <div class="about__box">
+            <p class="about__we">
+              Мы - благотворительное общественное объединение защиты животных «СПАСИ ЖИЗНЬ». 
+              Цель нашей деятельности: помощь бездомным животным, оказавшимся в Пункте отлова 
+              и временного содержания безнадзорных животных г.Гродно.
+            </p>
+            <p class="about__contacts" id="contacts">Контакты</p>
+            <ul class="about__list">
+              <li>
+                Если Вы хотите приютить одного из этих четвероногих или оказать какую-либо 
+                помощь, звоните волонтёрам:
+              </li>
+              <li>+375 (33) 6237879, Лена</li>
+              <li>+375 (29) 7877791, Ольга</li>
+              <li>+375 (29) 5837015, Рита</li>
+            </ul>
+            <div class="about__box-social-network">
+              <p class="about__how-contact">
+                Связаться с нами можно написав в соц. сетях.
+              </p>
+              <div class="logo-display">
+                <a href="https://vk.com/animalsgrodno/" target="_blank" 
+                class="fon-soc-network about__fon-soc-network-margin">
+                  <span  class="link-soc-network">
+                    <svg class="logo-vk">
+                      <use xlink:href="#vk"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="https://www.instagram.com/animalsgrodno/" target="_blank" class="fon-soc-network">
+                  <span  class="link-soc-network">
+                    <svg class="logo-insta">
+                      <use xlink:href="#insta"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="thanks">
+        <h2 class="thanks__title">Спасибо<br> за помощь</h2>
+        <div class="thanks__elem">
+          <div class="thanks__elem-circle"></div>
+        </div> 
+      </section>
+    </main>
+    <footer class="footer wrapper">
+      <div class="flex-layout justify-content-space-between">
+        <ul class="footer__list-one">
+          <li class="footer__list-one-item footer__list-one-first_item">
+            <a href="#home" class="footer__link">Дом или передержка</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-second_item">
+            <a href="#finance" class="footer__link">Финансовая поддержка</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-third_item">
+            <a href="#other-help" class="footer__link">Корма, лекарства и другие вещи</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-fourth_item">
+            <a href="#auto" class="footer__link">Автопомощь</a>
+          </li>
+          <li class="footer__list-one-item footer__list-one-fifth_item">
+            <a href="#volunteer" class="footer__link">Волонтерство</a>
+          </li>
+        </ul>
+        <ul class="footer__list-two">
+          <li class="footer__list-two-item">
+            <a href="#about" class="footer__link">О нас</a>  
+          </li>
+          <li class="footer__list-two-item">
+            <a href="#contacts" class="footer__link">Контакты</a>  
+          </li>
+        </ul>
+        <p class="footer__we">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</p>
+      </div>
+    </footer>
+    <svg display="none">
+      <symbol viewBox="0 0 10 18" id="arrow">
+        <path fill-rule="evenodd" clip-rule="evenodd" 
+        d="M7.20548 9L0 1.46179L1.39726 0L10 9L1.39726 
+        18L0 16.5382L7.20548 9Z"/>  
+      </symbol>
+    </svg>
+    <svg display="none">
+      <symbol viewBox="0 0 42 30" id="vk">
+        <path d="M35.3122 7.21896C35.5218 6.51571 35.3122 6 34.3211 
+        6H31.0379C30.2025 6 29.8207 6.44614 29.6111 6.93615C29.6111 
+        6.93615 27.9418 11.0482 25.5764 13.7145C24.8128 14.4903 24.464 14.7353 
+        24.0478 14.7353C23.8397 14.7353 23.5373 14.4903 23.5373 13.7871V7.21896C23.5373 
+        6.37506 23.2963 6 22.6001 6H17.441C16.92 6 16.6056 6.39019 16.6056 
+        6.76223C16.6056 7.56075 17.7883 7.74525 17.9096 9.99563V14.8775C17.9096 
+        15.9467 17.7195 16.1418 17.3003 16.1418C16.1879 16.1418 13.4811 
+        12.0146 11.8747 7.29004C11.5618 6.37204 11.2459 6.00151 10.4075 
+        6.00151H7.12584C6.18714 6.00151 6 6.44766 6 6.93766C6 7.81785 7.11236 
+        12.1734 11.1815 17.934C13.8943 21.8676 17.7135 24 21.1928 24C23.2783 
+        24 23.5358 23.5266 23.5358 22.71V19.7367C23.5358 18.79 23.7349 18.5994 
+        24.3951 18.5994C24.8802 18.5994 25.7156 18.8474 27.6634 20.7424C29.8881 
+        22.9897 30.2564 23.9985 31.5065 23.9985H34.7882C35.7254 23.9985 
+        36.194 23.5251 35.9245 22.5905C35.6295 21.6604 34.5666 20.3068 
+        33.1563 18.7053C32.3898 17.7918 31.2445 16.8088 30.8956 16.3173C30.4091 
+        15.6836 30.5498 15.4038 30.8956 14.8412C30.8971 14.8427 34.896 9.15325 
+        35.3122 7.21896Z"/>
+      </symbol>
+    </svg>
+    <svg display="none">
+      <symbol id="insta" viewBox="0 0 42 42">
+        <path d="M20.996 15.9979C18.2417 15.9979 15.9939 18.2456 15.9939 21C15.9939 
+        23.7544 18.2417 26.0021 20.996 26.0021C23.7503 26.0021 25.998 23.7544 25.998 
+        21C25.998 18.2456 23.7503 15.9979 20.996 15.9979ZM35.9983 21C35.9983 18.9286 
+        36.0171 16.876 35.9008 14.8083C35.7844 12.4067 35.2366 10.2753 33.4804 
+        8.51907C31.7205 6.75913 29.5929 6.21501 27.1913 6.09868C25.1199 5.98235 
+        23.0673 6.00112 20.9997 6.00112C18.9284 6.00112 16.8758 5.98235 14.8082 
+        6.09868C12.4066 6.21501 10.2752 6.76288 8.51902 8.51907C6.75911 10.279 
+        6.21501 12.4067 6.09868 14.8083C5.98235 16.8797 6.00112 18.9324 6.00112 
+        21C6.00112 23.0676 5.98235 25.124 6.09868 27.1917C6.21501 29.5933 6.76287 
+        31.7247 8.51902 33.4809C10.2789 35.2409 12.4066 35.785 14.8082 35.9013C16.8795 
+        36.0176 18.9321 35.9989 20.9997 35.9989C23.0711 35.9989 25.1237 36.0176 27.1913 
+        35.9013C29.5929 35.785 31.7243 35.2371 33.4804 33.4809C35.2403 31.721 35.7844 
+        29.5933 35.9008 27.1917C36.0208 25.124 35.9983 23.0714 35.9983 21ZM20.996 
+        28.6964C16.7369 28.6964 13.2997 25.2591 13.2997 21C13.2997 16.7409 16.7369 
+        13.3035 20.996 13.3035C25.255 13.3035 28.6923 16.7409 28.6923 21C28.6923 
+        25.2591 25.255 28.6964 20.996 28.6964ZM29.0075 14.7858C28.0131 14.7858 27.2101 
+        13.9828 27.2101 12.9883C27.2101 11.9939 28.0131 11.1909 29.0075 11.1909C30.0019 
+        11.1909 30.8049 11.9939 30.8049 12.9883C30.8052 13.2245 30.7589 13.4583 30.6687 
+        13.6765C30.5785 13.8948 30.4461 14.093 30.2791 14.26C30.1122 14.427 29.9139 
+        14.5594 29.6957 14.6496C29.4775 14.7398 29.2436 14.7861 29.0075 14.7858Z"/>
+      </symbol>
+    </svg> 
+    <svg display="none">
+      <symbol viewBox="0 0 26 26" id="control-elem">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 1.625C9.98316 1.625 
+        7.08989 2.82343 4.95666 4.95666C2.82344 7.08989 1.625 9.98316 1.625 13C1.625 
+        16.0168 2.82344 18.9101 4.95666 21.0433C7.08989 23.1766 9.98316 24.375 13 
+        24.375C16.0168 24.375 18.9101 23.1766 21.0433 21.0433C23.1766 18.9101 24.375 
+        16.0168 24.375 13C24.375 9.98316 23.1766 7.08989 21.0433 4.95666C18.9101 
+        2.82343 16.0168 1.625 13 1.625ZM13 -1.1365e-06C9.55219 -1.43791e-06 6.24559 
+        1.36964 3.80761 3.80761C1.36964 6.24558 1.43791e-06 9.55218 1.1365e-06 
+        13C8.35079e-07 16.4478 1.36964 19.7544 3.80761 22.1924C6.24558 24.6304 
+        9.55219 26 13 26C16.4478 26 19.7544 24.6304 22.1924 22.1924C24.6304 19.7544 
+        26 16.4478 26 13C26 9.55219 24.6304 6.24558 22.1924 3.80761C19.7544 1.36964 
+        16.4478 -8.35079e-07 13 -1.1365e-06Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5758 7.54973C13.6514 
+        7.62521 13.7114 7.71487 13.7524 7.81358C13.7934 7.91229 13.8145 8.01811 
+        13.8145 8.12498C13.8145 8.23185 13.7934 8.33767 13.7524 8.43639C13.7114 
+        8.5351 13.6514 8.62476 13.5758 8.70023L9.27438 13L13.5758 17.2997C13.6513 
+        17.3753 13.7112 17.465 13.7521 17.5637C13.793 17.6624 13.814 17.7681 13.814 
+        17.875C13.814 17.9818 13.793 18.0876 13.7521 18.1863C13.7112 18.285 13.6513 
+        18.3747 13.5758 18.4502C13.5002 18.5258 13.4105 18.5857 13.3118 18.6266C13.2131 
+        18.6675 13.1073 18.6885 13.0005 18.6885C12.8937 18.6885 12.7879 18.6675 12.6892 
+        18.6266C12.5905 18.5857 12.5008 18.5258 12.4253 18.4502L7.55025 13.5752C7.47459 
+        13.4998 7.41455 13.4101 7.37359 13.3114C7.33263 13.2127 7.31155 13.1069 7.31155 
+        13C7.31155 12.8931 7.33263 12.7873 7.37359 12.6886C7.41455 12.5899 7.47459 
+        12.5002 7.55025 12.4247L12.4253 7.54973C12.5007 7.47407 12.5904 7.41403 12.6891 
+        7.37307C12.7878 7.33211 12.8936 7.31103 13.0005 7.31103C13.1074 7.31103 13.2132 
+        7.33211 13.3119 7.37307C13.4106 7.41403 13.5003 7.47407 13.5758 7.54973Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6875 13C18.6875 13.2155 
+        18.6019 13.4221 18.4495 13.5745C18.2972 13.7269 18.0905 13.8125 17.875 
+        13.8125L9.75 13.8125C9.53451 13.8125 9.32785 13.7269 9.17548 13.5745C9.0231 
+        13.4221 8.9375 13.2155 8.9375 13C8.9375 12.7845 9.0231 12.5778 9.17548 
+        12.4255C9.32785 12.2731 9.53451 12.1875 9.75 12.1875L17.875 12.1875C18.0905 
+        12.1875 18.2972 12.2731 18.4495 12.4255C18.6019 12.5778 18.6875 12.7845 18.6875 
+        13Z"/>
+      </symbol>
+    </svg>
+    <svg display="none">
+      <symbol viewBox="0 0 16 16" id="close-form">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99998 6.58579L14.3639 
+        0.221826L15.7782 1.63604L9.4142 8L15.7782 14.364L14.3639 15.7782L7.99998 
+        9.41421L1.63602 15.7782L0.22181 14.364L6.58577 8L0.22181 1.63604L1.63602 
+        0.221826L7.99998 6.58579Z" fill="#81869C"/>
+      </symbol>
+    </svg>
+    <div id="disable-fon" class="display-none">
+      <div class="transfer form-box display-none" tabindex="1">
+        <h3 class="form-title">Кому и куда передать?</h3>
+        <svg class="close-form last" tabindex="2">
+          <use xlink:href="#close-form"></use>
+        </svg>
+        <p>
+          Чтобы передать купленные вещи, свяжитесь с нашими волонтерами. Вы сможете 
+          договориться о времени и месте встречи.
+        </p>
+        <p>
+          Если доставить сами не сможете - волонтеры вам помогут в доставке.
+        </p>
+        <ul>
+          <li>
+            <span class="bold">+375 (33) 6237879</span> &nbsp;Лена
+          </li>
+          <li>
+            <span class="bold">+375 (29) 7877791</span> &nbsp;Ольга
+          </li>
+          <li>
+            <span class="bold">+375 (29) 5837015</span> &nbsp;Рита
+          </li>
+        </ul>
+      </div>
+      <form class="volunteer form-box display-none" method="POST" tabindex="1">
+        <div class="wrapper-form">
+          <h3 class="form-title">Волонтерство</h3>
+          <svg class="close-form">
+            <use xlink:href="#close-form"></use>
+          </svg>
+          <h4 class="form-petition">Заявка</h4>
+          <p class="form-petition-info">
+            Отправьте нам заявку о том, что готовы помочь. Когда нам будет необходима помощь, мы позвоним вам.
+          </p>
+          <div class="form-input-box">
+            <input type="text" name="name" class="form-input-text name" 
+            placeholder="Фамилия и имя" autocomplete="off" tabindex="2">
+            <label class="form-label display-none">Фамилия и имя</label>
+          </div>
+          <div class="form-input-box form-box-mobile">
+            <input type="tel" name="mobile" class="form-input-text mobile" 
+            placeholder="Номер телефона" autocomplete="off" tabindex="3">
+            <label class="form-label display-none">Номер телефона</label>
+          </div>
+          <p class="mobile-status">Обязательное поле для заполнения</p>
+          <input type="radio" name="type-help" checked class="display-none" value="always" id="always-help">
+          <input type="radio" name="type-help" class="display-none" value="sometimes" id="sometimes-help">
+          <div class="volunteer__help-always" tabindex="4">
+            <label for="always-help" class="volunteer__help-radio"></label>
+            <label for="always-help" class="volunteer__help-description">
+              Хочу помогать на постоянной основе (расписание можно подобрать так, как будет удобно для всех)
+            </label>
+          </div>
+          <div class="volunteer__help-sometimes" tabindex="5">
+            <label for="sometimes-help" class="volunteer__help-radio"></label>
+            <label for="sometimes-help" class="volunteer__help-description">
+              Готов помогать иногда. Хочу выбрать удобное для меня время
+            </label>
+          </div>
+          <div class="form-input-box">
+            <textarea maxlength="500" class="form-textarea" placeholder="Замечания" 
+            autocomplete="off" tabindex="6"></textarea>
+            <label class="form-label display-none">Замечания</label>
+          </div>
+          <div class="form-buttons">
+            <div class="form-button-fon-gold form-button-fon-disabled">
+              <button type="submit" class="form-button-gold form-button-disabled" tabindex="7">
+                Отправить заявку
+              </button>
+            </div>
+            <div class="button-fon button-fon-silver form-button-fon-silver">
+              <button type="button" class="button button-silver form-button-silver" tabindex="8">
+                Отмена
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="take-home form-box display-none" method="POST" tabindex="1">
+        <div class="wrapper-form">
+          <h3 class="form-title">Забрать домой</h3>
+          <svg class="close-form">
+            <use xlink:href="#close-form"></use>
+          </svg>
+          <div class="form-pet">
+            <img src="#" alt="pet photo" class="form-pet-photo">
+            <div>
+              <p class="form-pet-name"></p>
+              <p class="form-pet-age"></p>
+            </div>
+          </div>
+          <p class="form-petition-info">
+            Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца.
+          </p>
+          <div class="form-input-box">
+            <input type="text" name="name" class="form-input-text name" 
+            placeholder="Фамилия и имя" autocomplete="off" tabindex="2">
+            <label class="form-label display-none">Фамилия и имя</label>
+          </div>
+          <div class="form-input-box form-box-mobile">
+            <input type="tel" name="mobile" class="form-input-text mobile" 
+            placeholder="Номер телефона" autocomplete="off" tabindex="3">
+            <label class="form-label display-none">Номер телефона</label>
+          </div>
+          <p class="mobile-status">Обязательное поле для заполнения</p>
+          <div class="form-input-box">
+            <textarea maxlength="500" class="form-textarea" placeholder="Замечания" 
+            autocomplete="off" tabindex="4"></textarea>
+            <label class="form-label display-none">Замечания</label>
+          </div>
+          <ul class="form-mobile-info">
+            <li>Если у вас есть вопросы, можете позвонить нам:</li>
+            <li>+375 (33) 6237879 Лена</li>
+            <li>+375 (29) 7877791 Ольга</li>
+            <li>+375 (29) 5837015 Рита</li>
+          </ul>
+          <div class="form-buttons">
+            <div class="form-button-fon-gold form-button-fon-disabled">
+              <button type="submit" class="form-button-gold form-button-disabled" tabindex="5">
+                Отправить заявку
+              </button>
+            </div>
+            <div class="button-fon button-fon-silver form-button-fon-silver">
+              <button type="button" class="button button-silver form-button-silver" tabindex="6">
+                Отмена
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="take-on-time form-box display-none" method="POST" tabindex="1">
+        <div class="wrapper-form">
+          <h3 class="form-title">Забрать на передержку</h3>
+          <svg class="close-form">
+            <use xlink:href="#close-form"></use>
+          </svg>
+          <div class="form-pet">
+            <img src="#" alt="pet photo" class="form-pet-photo">
+            <div>
+              <p class="form-pet-name"></p>
+              <p class="form-pet-age"></p>
+            </div>
+          </div>
+          <p class="form-petition-info">
+            Оставьте информацию о себе. Мы позвоним вам и договоримся, 
+            когда вы сможете забрать себе питомца на передержку.
+          </p>
+          <div class="form-input-box">
+            <input type="text" name="name" class="form-input-text name" 
+            placeholder="Фамилия и имя" autocomplete="off" tabindex="2">
+            <label class="form-label display-none">Фамилия и имя</label>
+          </div>
+          <div class="form-input-box form-box-mobile">
+            <input type="tel" name="mobile" class="form-input-text mobile" 
+            placeholder="Номер телефона" autocomplete="off" tabindex="3">
+            <label class="form-label display-none">Номер телефона</label>
+          </div>
+          <p class="mobile-status">Обязательное поле для заполнения</p>
+          <div class="form-input-box">
+            <textarea maxlength="500" class="form-textarea" placeholder="Замечания" 
+            autocomplete="off" tabindex="4"></textarea>
+            <label class="form-label display-none">Замечания</label>
+          </div>
+          <ul class="form-mobile-info">
+            <li>Если у вас есть вопросы, можете позвонить нам:</li>
+            <li>+375 (33) 6237879 Лена</li>
+            <li>+375 (29) 7877791 Ольга</li>
+            <li>+375 (29) 5837015 Рита</li>
+          </ul>
+          <div class="form-thanks">
+            <p >
+              Наши волонтеры будут активно искать будущий дом хвостику, пока вы помогаете нам с передержкой.
+            </p>
+            <p>Спасибо за помощь!</p>
+          </div>
+          <div class="form-buttons">
+            <div class="form-button-fon-gold form-button-fon-disabled">
+              <button type="submit" class="form-button-gold form-button-disabled" tabindex="5">
+                Отправить заявку
+              </button>
+            </div>
+            <div class="button-fon button-fon-silver form-button-fon-silver">
+              <button type="button" class="button button-silver form-button-silver" tabindex="6">
+                Отмена
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="auto-help form-box display-none" method="POST" tabindex="1">
+        <div class="wrapper-form">
+          <h3 class="form-title">Автопомощь</h3>
+          <svg class="close-form">
+            <use xlink:href="#close-form"></use>
+          </svg>
+          <h4 class="form-petition">Заявка</h4>
+          <p class="form-petition-info">
+            Отправьте нам заявку о том, что готовы помочь. Когда нам будет необходима помощь в 
+            транспортировке, мы позвоним вам.
+          </p>
+          <div class="form-input-box">
+            <input type="text" name="name" class="form-input-text name" 
+            placeholder="Фамилия и имя" autocomplete="off" tabindex="2">
+            <label class="form-label display-none">Фамилия и имя</label>
+          </div>
+          <div class="form-input-box form-box-mobile">
+            <input type="tel" name="mobile" class="form-input-text mobile" 
+            placeholder="Номер телефона" autocomplete="off" tabindex="3">
+            <label class="form-label display-none">Номер телефона</label>
+          </div>
+          <p class="mobile-status">Обязательное поле для заполнения</p>
+          <p class="auto-help__info">Выберите удобное время, когда вы сможете нам помочь:</p>
+          <div class="auto-help__datepick-box"></div>
+          <div class="auto-help__add-date">
+            <div class="auto-help__add-date-circle-disable"></div>
+            <p>Добавить дату и время</p>
+          </div>
+          <div class="auto-help__type" tabindex="5">
+            <input type="checkbox" id="week" class="display-none auto-help__input">
+            <label for="week" class="auto-help__checkbox"></label>
+            <label for="week" class="auto-help__checkbox-info">В любой будний день</label>
+          </div>
+          <div class="auto-help__type" tabindex="6">
+            <input type="checkbox" id="weekend" class="display-none auto-help__input">
+            <label for="weekend" class="auto-help__checkbox"></label>
+            <label for="weekend" class="auto-help__checkbox-info">В любой выходной день</label>
+          </div>
+          <p class="auto-help__info">Выберите вид автопомощи:</p>
+          <div class="auto-help__type" tabindex="7">
+            <input type="checkbox" id="delivery-food" class="display-none auto-help__input">
+            <label for="delivery-food" class="auto-help__checkbox"></label>
+            <label for="delivery-food" class="auto-help__checkbox-info">
+              Доставка еды, медикаментов и других небольших вещей
+            </label>
+          </div>
+          <div class="auto-help__type" tabindex="8">
+            <input type="checkbox" id="delivery-materials" class="display-none auto-help__input">
+            <label for="delivery-materials" class="auto-help__checkbox"></label>
+            <label for="delivery-materials" class="auto-help__checkbox-info">
+              Доставка сена или соломы, строительных материлов для будок и других крупногабаритных вещей
+            </label>
+          </div>
+          <div class="auto-help__type" tabindex="9">
+            <input type="checkbox" id="transit-pet" class="display-none auto-help__input">
+            <label for="transit-pet" class="auto-help__checkbox"></label>
+            <label for="transit-pet" class="auto-help__checkbox-info">
+              Транспортировка небольших собак и котов
+            </label>
+          </div>
+          <div class="auto-help__type auto-help__type-margin-bottom" tabindex="10">
+            <input type="checkbox" id="transit-big" class="display-none auto-help__input">
+            <label for="transit-big" class="auto-help__checkbox"></label>
+            <label for="transit-big" class="auto-help__checkbox-info">
+              Транспортировка больших собак
+            </label>
+          </div>
+          <div class="form-input-box">
+            <textarea maxlength="500" class="form-textarea" placeholder="Замечания" 
+            autocomplete="off" tabindex="11"></textarea>
+            <label class="form-label display-none">Замечания</label>
+          </div>
+          <div class="form-buttons">
+            <div class="form-button-fon-gold form-button-fon-disabled">
+              <button type="submit" class="form-button-gold form-button-disabled" tabindex="12">
+                Отправить заявку
+              </button>
+            </div>
+            <div class="button-fon button-fon-silver form-button-fon-silver">
+              <button type="button" class="button button-silver form-button-silver" tabindex="13">
+                Отмена
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="ok">
+        <p class="ok__info">Успешно отправлено</p>
+        <div class="ok__bg"></div>
+      </div>
+      <div class="pet-info display-none" tabindex="1">
+        <svg class="close-pet-info" tabindex="4">
+          <use xlink:href="#close-form"></use>
+        </svg>
+        <p class="pet-name"></p>
+        <p class="pet-age"></p>
+        <div class="pet-descriptions"></div>
+        <div class="pet-images"></div>
+        <div class="pet-button">
+          <a href="" class="button-fon button-fon-gold pet-info-button-fon-gold" id="take-home_two" tabindex="2">
+            <span class="button button-gold pet-info-button-gold">
+              Забрать домой
+            </span>
+          </a>
+          <a href="" class="button-fon button-fon-silver pet-info-button-fon-silver" id="take-on-time_two" tabindex="3">
+            <span class="button button-silver pet-info-button-silver">
+              Забрать на передержку
+            </span>
+          </a>
+        </div>
+      </div>
+      <div id="map" class="map" tabindex="1">
+        <svg class="close-map" tabindex="2">
+          <use xlink:href="#close-form"></use>
+        </svg>
+      </div>
+    </div>
+    <script src="js/functional.js"></script>
+  </body>
+</html>

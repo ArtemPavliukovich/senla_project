@@ -1,0 +1,43 @@
+/* Кружки с картинками */
+.help__button-link::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-clip: content-box;
+  background-image: linear-gradient(to right, #F6F6F6 50%, transparent 50%);
+  transition: transform 0.25s ease-out;
+  border: 1px solid transparent;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.help__button-link::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-clip: content-box;
+  border: 1px solid transparent;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, #F6F6F6 50%);
+  transition: transform 0.25s ease-out;
+}
+
+.can-hover .help__button-link:hover::before {transform: translateX(-50%);}
+.can-hover .help__button-link:hover::after {transform: translateX(50%);}
+
+/* .can-hover .help__button-link:active::before {
+  transform: translateX(-100%);
+  background-image: linear-gradient(to right, transparent 50%, #FAFAFA 50%);
+}
+.can-hover .help__button-link:active::after {
+  transform: translateX(100%);
+  background-image: linear-gradient(to right, #FAFAFA 50%, transparent 50%);
+} */
+

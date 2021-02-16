@@ -1,0 +1,301 @@
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 0 64px 0;
+  width: calc(100% / 12 * 11 - 20px);
+  margin-left: 10px;
+}
+
+.header__fon {
+  background: #FAC832;
+  width: 63%;
+  height: 713px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 0px 0px 8px 8px;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
+.header__nav-list {display: flex;}
+
+.header__link {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  color: #242424;
+  position: relative;
+}
+
+.header__link::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: black;
+  border-bottom: 1px solid black;
+  opacity: 0;
+  width: 102%;
+}
+
+.header__link--after-one::after {content: 'Как помочь';}
+.header__link--after-two::after {content: 'Подопечные животные';}
+.header__link--after-three::after {content: 'О нас';}
+.header__link--after-four::after {content: 'Контакты';}
+
+.header__list-item:first-child,
+.header__list-item:nth-child(3) {margin-right: 32px;}
+.header__list-item:nth-child(2) {margin-right: 194px;}
+
+.can-hover .header__link:hover {color: transparent;}
+.can-hover .header__link:hover::after {opacity: 1;}
+
+.body .header__link:active {color: transparent;}
+.body .header__link:active::after {
+  opacity: 1;
+  color: #6B6B6B;
+  border-bottom: 1px solid #6B6B6B;
+}
+
+.header__fon-cat {
+  position: absolute;
+  right: 166px;
+  top: 470px;
+  width: 483px;
+  height: 469px;
+}
+
+/* Логотипы социальных сетей - их фон*/
+.header__fon-soc-network {
+  background-color: #FFC93F;
+  background-image: linear-gradient(144.1deg, #FFE193 12.45%, #FFC93F 89.31%),
+                    linear-gradient(rgba(238, 191, 58, 1), rgba(255, 221, 133, 1));
+  box-shadow: 7px 7px 16px rgba(204, 151, 0, 0.6), -4px -4px 8px #FFDB7E, 
+              inset 13px 22px 8px #F1C74F;
+}
+
+.header__fon-soc-network:first-of-type {margin-right: 28px;}
+
+.header__link-soc-network {
+  background: #ECBD37;
+  background: linear-gradient(150.26deg, #FFE28F 6.75%, #ECBD37 91.17%);
+  box-shadow: 3px 3px 13px #C18F00;
+}
+
+.can-hover .header__fon-soc-network:hover .header__link-soc-network {
+  background: #FFC726;
+  background: linear-gradient(150.26deg, #FFEAAD 6.75%, #FCE6A7 45.73%, #FFC726 91.17%);
+  box-shadow: 3px 3px 13px #C18F00;
+}
+
+.body .header__fon-soc-network:active .header__link-soc-network {
+  background: #FBC11B;
+  background: linear-gradient(150.26deg, #FFDA71 6.75%, #FFCD40 43.24%, #FBC11B 91.17%);
+  box-shadow: 2px 2px 6px #C18F00, inset 3px 3px 10px rgba(199, 129, 0, 0.59);
+}
+
+/* Логотипы */
+.header__logo-vk {
+  fill: #F6F6F6;
+  filter: drop-shadow(0px 0px 6px #D19B00);
+}
+
+.header__logo-insta {
+  fill: #F6F6F6;
+  filter: drop-shadow(0px 0px 6px #D19B00);
+}
+
+.can-hover .header__fon-soc-network:hover .header__logo-vk, 
+.can-hover .header__fon-soc-network:hover .header__logo-insta {
+  fill: white;
+  filter: drop-shadow(0px 1px 3px rgba(144, 93, 0, 0.49));
+}
+
+.body .header__fon-soc-network:active .header__logo-vk,
+.body .header__fon-soc-network:active .header__logo-insta {
+  fill: #F2F2F2;
+  filter: drop-shadow(0px 0px 5px #D19B00);
+}
+
+@media screen and (max-width: 1269px) {
+  .header__wrapper {padding-bottom: 27px;}
+
+  .header__list-item:nth-child(2) {margin-right: 52px;}
+
+  .header__fon{height: 564px;}
+
+  .header__fon-cat {
+    right: 107px;
+    top: 374px;
+    width: 344px;
+    height: 326px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* Бургер меню сам значек*/
+  .header__nav-burger {
+    display: flex;
+    width: 30px;
+    height: 22px;
+    margin-left: 5px;
+    position: relative;
+    z-index: 52;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .header__nav-burger-item {
+    border-radius: 20px;
+    width: 100%;
+    height: 3.2px;
+    background: #242424;
+    transition: transform 0.4s ease, background 0.3s ease;
+  }
+
+  .header__nav-burger-item::before,
+  .header__nav-burger-item::after {
+    position: absolute;
+    content: "";
+    height: 3.2px;
+    width: 100%;
+    background: #242424;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+  }
+
+  .header__nav-burger-item::before {transform: translateY(-7px);}
+  .header__nav-burger-item::after {transform: translateY(7px);}
+
+  .header__nav-burger-active > .header__nav-burger-item {
+    transform: translateX(-20px);
+    background: transparent;
+  }
+  .header__nav-burger-active > .header__nav-burger-item::before {
+    transform: rotate(45deg) translate(15px, -15px);
+  }
+  .header__nav-burger-active > .header__nav-burger-item::after {
+    transform: rotate(-45deg) translate(15px, 15px);
+  }
+  /* --------------------- */
+
+  /* Мобильное меню */
+  .header__nav-list {
+    position: absolute;
+    left: 0;
+    top: -500px;
+    flex-direction: column;
+    z-index: 51;
+    padding-top: 10px;
+    transition: top 0.3s ease-out;
+    background: white;
+  }
+  .header__nav-list-active {top: 80px;}
+ 
+  .header__nav-list::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #FFC41E;
+    top: -80px;
+  }
+
+  .header__list-item {
+    text-align: center;
+    margin: 0 auto!important;
+    z-index: 51;
+    border-bottom: 1px solid #EEBF3A;
+    padding: 25px 0 24px 0;
+    width: 548px;
+  }
+
+  .header__list-item:last-child {
+    border-bottom: none;
+    padding-bottom: 45px;
+  }
+  /* --------------------- */
+
+  .header__wrapper {padding: 24px 0 12px 0;}
+
+  .header__fon {height: 385px;}
+
+  .header__fon-cat {
+    right: 73px;
+    top: 256px;
+    width: 235px;
+    height: 222px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__fon-soc-network:first-of-type {margin-right: 22px;}
+
+  .header__nav-burger {
+    width: 24px;
+    height: 16px;
+  }
+
+  .header__nav-list {
+    top: -450px;
+    padding-top: 0;
+  }
+  .header__nav-list-active {top: 64px;}
+
+  .header__nav-list::before {
+    height: 64px;
+    top: -64px;
+  }
+
+  .header__list-item {
+    width: 414px;
+    padding: 22px 0 21px 0;
+  }
+  .header__list-item:last-child {padding-bottom: 29px;}
+
+  .position-relative-off {position: static;}
+
+  .header__wrapper {
+    padding: 24px 0 20px 0;
+    width: calc(100% / 6 * 4 - 16px);
+    margin-left: 0;
+  }
+
+  .header__fon {
+    width: 48.75%;
+    height: 357px;
+  }
+
+  .header__fon-cat {
+    right: 95px;
+    top: 251px;
+    width: 165px;
+    height: 157px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .header__wrapper {width: calc(100% - 16px);}
+
+  .header__fon {
+    min-width: 225px;
+    background-position-x: center;
+  }
+
+  .header__fon-cat {right: 13vw;}
+
+  .header__nav-list {padding-top: 10px;}
+
+  .header__list-item {
+    width: 226px;
+    padding: 25px 0 24px 0;
+  }
+  .header__list-item:last-child {padding-bottom: 45px;}
+}
+

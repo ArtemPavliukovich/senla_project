@@ -1,0 +1,233 @@
+html {
+  background: #F6F6F6;
+  font-family: 'Gilroy', 'Arial';
+  font-weight: 400;
+  font-style: normal;
+  color: #242424;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+a:focus-visible, button:focus-visible,
+.close-form:focus-visible,
+.close-pet-info:focus-visible {outline: #6B6B6B solid 2px;}
+
+body {
+  max-width: 1920px;
+  min-width: 360px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+.display-none {display: none;}
+
+.hidden {overflow: hidden;}
+
+.disable-fon {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-width: 360px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+  transition: background 0.5s ease;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pets__wrapper {
+  max-width: 1206px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 40px 30px 20px 30px;
+}
+
+.wrapper {
+  max-width: 1146px;
+  min-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flex-layout {
+  display: flex;
+  margin: 0 -10px;
+  flex-wrap: wrap;
+}
+.justify-content-flex-end {justify-content: flex-end;}
+.justify-content-center {justify-content: center;}
+.justify-content-space-between {justify-content: space-between;}
+.align-items-center {align-items: center;}
+
+/* Кнопки действий овальные*/
+.button-fon {
+  width: 221px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  border-radius: 58px;
+  cursor: pointer;
+  background-clip: content-box, border-box; 
+}
+
+.button-fon-silver {
+  background-color: #F6F6F6;
+  background-image: linear-gradient(#F6F6F6, #F6F6F6),
+                    linear-gradient(to right, rgba(233, 233, 233, 0.78), rgba(255, 255, 255, 0.65));
+  box-shadow: 7px 7px 16px #E3E3E3, -4px -4px 8px rgba(255, 255, 255, 0.7), 
+              inset 13px 22px 8px rgba(0, 0, 0, 0.02);
+}
+
+.button-fon-gold {
+  background-color: #FFCB38;
+  background-image: linear-gradient(180deg, #FFDE89 0%, #FFCB38 100%),
+                    linear-gradient(to right, rgba(233, 233, 233, 0.78), rgba(255, 255, 255, 0.65));
+  box-shadow: 7px 7px 16px #E3E3E3, -3px -4px 8px rgba(255, 255, 255, 0.9), 
+              inset 13px 22px 8px rgba(0, 0, 0, 0.02);
+}
+
+
+.can-hover .button-fon-gold:hover {
+  background-color: #E6AA00;
+  background-image: linear-gradient(180deg, #FFDC81 0%, #E6AA00 100%),
+                    linear-gradient(to right, rgba(233, 233, 233, 0.78), rgba(255, 255, 255, 0.65));
+  box-shadow: 7px 7px 16px #E0E0E0, -3px -4px 8px #FFFFFF, 
+              inset 13px 22px 8px rgba(0, 0, 0, 0.02);                   
+}
+
+
+.body .button-fon-gold:active {
+  background-color: #FFCB38;
+  background-image: linear-gradient(180deg, #FFDE89 0%, #FFCB38 100%),
+                    linear-gradient(to right, rgba(233, 233, 233, 0.78), rgba(255, 255, 255, 0.65));
+  box-shadow: 7px 7px 16px #E3E3E3, -3px -4px 8px rgba(255, 255, 255, 0.9), 
+              inset 13px 22px 8px rgba(0, 0, 0, 0.02);
+}
+
+.button {
+  width: 211px;
+  height: 32px;
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  line-height: 28px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1px;
+  background-clip: content-box, border-box;
+  border-radius: 58px;
+  color: #242424;
+}
+
+.button-silver {
+  background-color: #F6F6F6;
+  background-image: linear-gradient(180deg, #FBFBFB 0%, #F6F6F6 100%),
+                    linear-gradient(rgba(255, 255, 255, 0.71), rgba(255, 255, 255, 0));
+  box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25);
+}
+
+.can-hover .button-fon-silver:hover > .button-silver {
+  color: black;
+  background-color: #EFECEC;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 53.12%, #EFECEC 100%),
+                    linear-gradient(rgba(255, 255, 255, 0.71), rgba(255, 255, 255, 0));
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 3px 3px 13px rgba(128, 128, 128, 0.25);
+}
+
+.body .button-fon-silver:active > .button-silver {
+  color: #242424;
+  background-color: #FCFAFA;
+  background-image: linear-gradient(180deg, #F1F1F1 1.56%, #FCFAFA 100%),
+                    linear-gradient(rgba(255, 255, 255, 0.71), rgba(255, 255, 255, 0.5396));
+  box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25), inset 0px 4px 13px rgba(0, 0, 0, 0.06);
+}
+
+.button-gold {
+  background-color: #FFD45A;
+  background-image: linear-gradient(180deg, #FFECB5 0%, #FFE69F 0.01%, #FFD45A 100%),
+                    linear-gradient(rgba(255, 240, 197, 1), rgba(238, 192, 63, 1));
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+}
+
+.can-hover .button-fon-gold:hover > .button-gold {
+  color: black;
+  background-color: #FFC317;
+  background-image: linear-gradient(180deg, #FFEEBC 0%, #FFE69F 36.46%, #FFCF48 68.23%, #FFC317 100%),
+                    linear-gradient(rgba(255, 240, 197, 1), rgba(238, 192, 63, 1));
+}
+
+.body .button-fon-gold:active > .button-gold {
+  color: #242424;
+  background-color: #FFD24E;
+  background-image: linear-gradient(180deg, #FFE69F 0.01%, #E3B940 0.02%, #FFD24E 100%),
+                    linear-gradient(rgba(255, 212, 90, 1), rgba(244, 210, 114, 1));
+}
+
+/* Кнопки действий подчеркнутые */
+.button-underline {
+  font-size: 20px;
+  line-height: 40px;
+  color: #AD7F00;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+}
+
+.can-hover .button-underline:hover {color: #523C00;}
+.can-hover .button-underline:hover > span {border-bottom-color: #523C00;}
+
+.button-underline > span {border-bottom: 1px solid #AD7F00;}
+.body .button-underline:active {color: #F6B400;}
+.body .button-underline:active > span {border-bottom-color: #F6B400;}
+
+                                                    /* MOBILE */
+@media screen and (max-width: 1269px) {
+  .wrapper {margin: 0 30px;}
+}
+                                                    
+@media screen and (max-width: 1023px) {
+  html {font-size: 14px;}
+}
+
+@media screen and (max-width: 767px) {
+  .pets__wrapper {padding: 30px 30px 20px 30px;}
+
+  .button-fon {
+    width: 194px;
+    height: 30px;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 186px;
+    height: 22px;
+    line-height: 20px;
+  }
+
+  .flex-layout {
+    justify-content: center;
+    margin: 0 -8px;
+  }
+
+  .justify-content-flex-end {justify-content: center;}
+  .justify-content-space-between {justify-content: space-between;}
+
+  @-moz-document url-prefix() {
+    .button {line-height: 18px;}
+    .can-hover .button {line-height: 19px;}
+  }
+}

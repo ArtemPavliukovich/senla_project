@@ -1,0 +1,138 @@
+.footer {padding: 40px 0 16px 0;}
+
+.footer__list-one {
+  width: calc(100% / 12 * 9);
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  border-bottom: 1px solid #474747;
+  color: #474747;
+}
+
+.can-hover .footer__link:hover {
+  color: #AD7F00;
+  border-color: #AD7F00;
+}
+
+.footer .footer__link:active {
+  color: #474747;
+  border-color: #474747;
+}
+
+.footer__list-two {
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+.footer__list-two-item:first-child {margin-right: 42px;}
+
+.footer__we {
+  text-align: center;
+  margin-top: 20px;
+  color: #B3B3B3;
+  font-size: 12px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1269px) {
+  .footer {padding: 24px 0 16px 0;}
+
+  .footer__list-one {width: calc(100% - 20px);}
+  .footer__list-two {margin-left: 10px;}
+
+  .footer__we {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 24px;
+  }
+
+  .footer__list-two-item:first-child {margin-right: 21px;}
+}
+
+@media screen and (max-width: 1023px) {
+  .footer__list-one {width: calc(100% / 12 * 8);}
+
+  .footer__list-one-item {
+    margin-bottom: 20px;
+    flex-basis: 40%;
+  }
+
+  .footer__list-one-first_item {order: 1;}
+
+  .footer__list-one-second_item {
+    order: 3;
+    flex-basis: 50%;
+  }
+
+  .footer__list-one-third_item {
+    order: 5;
+    flex-basis: 100%;
+  }
+
+  .footer__list-one-fourth_item {
+    order: 2;
+    text-align: center;
+  }
+
+  .footer__list-one-fifth_item {
+    order: 4;
+    text-align: center;
+    padding-left: 10px;
+  }
+
+  .footer__we {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer__list-two {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .footer__list-two-item:first-child {margin: 0 0 20px 21px;}
+}
+
+@media screen and (max-width: 767px) {
+  .footer__list-one-first_item,
+  .footer__list-one-second_item,
+  .footer__list-one-third_item,
+  .footer__list-one-fourth_item,
+  .footer__list-one-fifth_item {
+    order: 0;
+    padding: 0;
+    flex-basis: auto;
+  }
+
+  .footer__list-one-fifth_item {margin-bottom: 24px;}
+
+  .footer__list-one {
+    width: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: calc(100% / 6 + 8px);
+    flex-shrink: 2;
+  }
+
+  .footer__list-two {margin-right: calc(100% / 6 + 8px);}
+}
+
+@media screen and (max-width: 639px) {
+  .footer__list-one {
+    width: 75%;
+    margin: 0;
+  } 
+  
+  .footer__list-two {
+    margin: 0;
+    width: 25%;
+  }
+}
