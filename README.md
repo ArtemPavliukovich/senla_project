@@ -2,16 +2,15 @@
 
 artem.pavl@protonmail.com
 
--[https://www.codecademy.com/profiles/ArtemPavluikovich] (https://www.codecademy.com/profiles/ArtemPavluikovich)
--[https://htmlacademy.ru/profile/id1742925/achievements] (https://htmlacademy.ru/profile/id1742925/achievements)
+https://www.codecademy.com/profiles/ArtemPavluikovich
+https://htmlacademy.ru/profile/id1742925/achievements
 
--[http://ggpromo.ru/] (http://ggpromo.ru/) - тут проект (я не успел полностью разобраться с вебпаком, 
+http://ggpromo.ru/ - тут проект (я не успел полностью разобраться с вебпаком, 
 поэтому к собеседованию, постараюсь закрыть этот вопрос и настроить нормальный конфиг);
 
--[https://raw.githubusercontent.com/ArtemPavliukovich/senla_project_database/main/database.json]
-(https://raw.githubusercontent.com/ArtemPavliukovich/senla_project_database/main/database.json) - в проекте я
+https://raw.githubusercontent.com/ArtemPavliukovich/senla_project_database/main/database.json - в проекте я
 имитировал базу данных файлом json (по этой ссылке я его получал). Это надо было чтобы написать, например
-фильтр или чтобы подгрузить контент на второй странице, показ карточек питомцев и т.п.
+фильтр или чтобы подгрузить контент на второй странице, показ карточек питомцев и т.д.
 
 Я не сделал все анимации, которые написала дизайнер, потому что летающие коты и собаки - это ужасно режет глаза.
 Вместо этого я добавил прелодер при переходе на вторую страницу, правда чтоб его нормально увидеть надо очень 
