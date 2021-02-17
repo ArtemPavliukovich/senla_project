@@ -1,3 +1,34 @@
+/* import css0 from '../css/reset.css';
+import css1 from '../css/font.css';
+import css2 from '../css/general.css';
+import css3 from '../css/header.css';
+import css4 from '../css/life.css';
+import css5 from '../css/promo.css';
+import css6 from '../css/help.css';
+import css7 from '../css/pets.css';
+import css8 from '../css/finance.css';
+import css9 from '../css/action.css';
+import css10 from '../css/news.css';
+import css11 from '../css/about.css';
+import css12 from '../css/thanks.css';
+import css13 from '../css/footer.css';
+import css14 from '../css/img.css';
+import css15 from '../css/form.css';
+import css16 from '../css/datepicker.css';
+import css17 from '../css/datepicker_custom.css';
+import css18 from '../css/animation.css';
+import css19 from '../css/pet-info.css';
+import img0 from '../img/i-am.png';
+import img1 from '../img/icon/home.svg';
+import img2 from '../img/best.png';
+import img3 from '../img/friend.png';
+import img4 from '../img/icon/finance.svg';
+import img5 from '../img/icon/care.svg';
+import img6 from '../img/icon/food.svg';
+import img7 from '../img/icon/delivery.svg';
+import img8 from '../img/icon/arrow.svg';
+import img9 from '../img/icon/icon_map.svg';
+import img10 from '../img/icon/icon_map-active.svg'; */
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
   const database = [];

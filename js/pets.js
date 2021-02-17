@@ -1,3 +1,13 @@
+/* import css0 from '../css/pets/reset.css';
+import css1 from '../css/pets/font.css';
+import css2 from '../css/pets/general.css';
+import css3 from '../css/pets/header.css';
+import css7 from '../css/pets/pets.css';
+import css13 from '../css/pets/footer.css';
+import css19 from '../css/pets/pet-info.css';
+import css15 from '../css/pets/form.css';
+import css18 from '../css/pets/preloader.css'; */
+'use strict'
 document.addEventListener('DOMContentLoaded', () => {
   const database = [];
   let sort_database = [];
@@ -280,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (e.target.classList.contains('mobile') && !e.target.value == '') {
-      mask_value = e.target.inputmask.unmaskedvalue();
+      let mask_value = e.target.inputmask.unmaskedvalue();
 
       if (mask_value.length >= 2 && !/(44)|(25)|(33)|(29)/.test(mask_value.slice(0, 2))) {
         showErrorMessage('Неверные цифры в скобках');
@@ -484,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Очистка формы */
   function clearForm(form) {
-    mobile = document.getElementById('mobile');
+    let mobile = document.getElementById('mobile');
     mobile.value = '';
     Inputmask.remove(mobile);
     resetInputError();
@@ -641,7 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Позиционирование тултипа на странице */
   function tultipPosition(tultip, e, touch) {
-    width_tultip = +window.getComputedStyle(tultip).width.replace('px', '');
+    let width_tultip = +window.getComputedStyle(tultip).width.replace('px', '');
     if (touch) {
       tultip.style.left = (window.innerWidth / 2) - (width_tultip / 2) + 'px';
       tultip.style.top = e.touches[0].clientY - 60 + 'px';
