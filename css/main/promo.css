@@ -40,6 +40,7 @@
   border-color: #FAC832;
   background: #FAC832;
   background-size: cover;
+  background-repeat: no-repeat;
   border-style: solid;
   border-radius: 50%;
   position: absolute;
@@ -53,14 +54,15 @@
   height: 245px;
   top: 265px;
   left: 271px;
+  border-style: solid!important;
   border-top: 8px;
   border-right: 8px;
   border-bottom: 9px;
   border-left: 9px;
-  border-style: solid;
   border-color: #EEBF3A;
   background: #EEBF3A;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50%;
 }
 

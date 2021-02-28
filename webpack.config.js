@@ -3,9 +3,9 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const TinyimgPlugin = require('tinyimg-webpack-plugin');
 
 module.exports = {
   mode: 'none',
@@ -33,32 +33,18 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: './css/[name].[contenthash].css'
+      filename: ({chunk}) => `./css/${chunk.name}/[name].[contenthash].css`
     }),
-    new ImageminPlugin({
-      bail: false,
-      cache: true,
-      imageminOptions: {
-        plugins: [
-          ['gifsicle', { interlaced: true }],
-          ['jpegtran', { progressive: true }],
-          ['optipng', { optimizationLevel: 5 }],
-          [
-            'svgo',
-            {
-              plugins: [
-                {
-                  removeViewBox: false
-                }
-              ]
-            }
-          ]
-        ]
-      }
+    new TinyimgPlugin({
+      enabled: true,
+      logged: true
     }),
     new CopyWebpackPlugin({
       patterns: [
-        {from: './src', to: path.resolve(__dirname, 'ready/src')}
+        {from: './src', to: path.resolve(__dirname, 'ready/src')},
+        {from: './img/database-img', to: path.resolve(__dirname, 'ready/img/database-img')},
+        {from: './img/icon/icon_map.svg', to: path.resolve(__dirname, 'ready/img/icon/')},
+        {from: './img/icon/icon_map-active.svg', to: path.resolve(__dirname, 'ready/img/icon/')}
       ]
     })
   ],
@@ -73,35 +59,53 @@ module.exports = {
               return path.relative(path.dirname(resourcePath), context) + '/';
             }
           }
-        }, 
-        'css-loader']
+        },
+        'css-loader',
+        'postcss-loader']
+      },
+      { 
+        test: /\.html$/,
+        use: [{
+          loader: 'html-loader',
+          options: {
+            sources: {
+              list: [
+                {
+                  tag: 'img',
+                  attribute: 'src',
+                  type: 'src'
+                }
+              ]
+            },
+            esModule: false
+          }
+        }]
+      },
+      {
+        test: /\.js$/i,
+        loader: 'babel-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.(?:|png|jpg|jpeg)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: `./img/[name].[ext]`
-          }
-        }]
+        type: 'asset/resource',
+        generator: {
+          filename: './img/[name].[contenthash].[ext]'
+        }
       },
       {
         test: /\.(?:|svg)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: `./img/icon/[name].[ext]`
-          }
-        }]
+        type: 'asset/resource',
+        generator: {
+          filename: './img/icon/[name].[contenthash].[ext]'
+        }
       },
       {
         test: /\.(?:|woff2|woff)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: `./fonts/[name].[contenthash].[ext]`
-          }
-        }]
+        type: 'asset/resource',
+        generator: {
+          filename: './fonts/[name].[contenthash].[ext]'
+        }
       }
     ]
   },

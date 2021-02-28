@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-Light.woff2'),
-       url('../fonts/Gilroy-Light.woff');
+  src: url('../../fonts/Gilroy-Light.woff2'),
+       url('../../fonts/Gilroy-Light.woff');
   font-style: normal;
   font-display: swap;
   font-weight: 300;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-Regular.woff2'),
-       url('../fonts/Gilroy-Regular.woff');
+  src: url('../../fonts/Gilroy-Regular.woff2'),
+       url('../../fonts/Gilroy-Regular.woff');
   font-style: normal;
   font-display: swap;
   font-weight: 400;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-Medium.woff2'),
-       url('../fonts/Gilroy-Medium.woff');
+  src: url('../../fonts/Gilroy-Medium.woff2'),
+       url('../../fonts/Gilroy-Medium.woff');
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-SemiBold.woff2'),
-       url('../fonts/Gilroy-SemiBold.woff');
+  src: url('../../fonts/Gilroy-SemiBold.woff2'),
+       url('../../fonts/Gilroy-SemiBold.woff');
   font-style: normal;
   font-display: swap;
   font-weight: 600;
@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-Bold.woff2'),
-       url('../fonts/Gilroy-Bold.woff');
+  src: url('../../fonts/Gilroy-Bold.woff2'),
+       url('../../fonts/Gilroy-Bold.woff');
   font-style: normal;
   font-display: swap;
   font-weight: 700;
@@ -45,8 +45,8 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-regular.woff2'),
-       url('../fonts/Roboto-regular.woff');
+  src: url('../../fonts/Roboto-regular.woff2'),
+       url('../../fonts/Roboto-regular.woff');
   font-style: normal;
   font-display: swap;
   font-weight: 400;

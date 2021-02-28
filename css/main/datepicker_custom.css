@@ -33,13 +33,13 @@
 .datepicker-left {
   width: 24px;
   height: 24px;
-  background: url('../img/icon/date_left.svg') no-repeat center;
+  background: url('../../img/icon/date_left.svg') no-repeat center;
 }
 
 .datepicker-right {
   width: 24px;
   height: 24px;
-  background: url('../img/icon/date_right.svg') no-repeat center;
+  background: url('../../img/icon/date_right.svg') no-repeat center;
 }
 
 .datepicker--content {
@@ -239,5 +239,5 @@
   bottom: 0;
   margin: auto 0;
   cursor: pointer;
-  background: url('../img/icon/close.svg') no-repeat center;
+  background: url('../../img/icon/close.svg') no-repeat center;
 }

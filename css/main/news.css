@@ -16,19 +16,9 @@
 .news__item {
   display: flex;
   align-items: center;
-  position: relative;
-  transform: translateX(-600px);
-  visibility: hidden;
-  opacity: 0;
 }
 .news__item:first-child {margin-bottom: 40px;}
 .news__item:first-child ~ .news__item {margin-bottom: 24px;}
-
-.news__item-animation {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-}
 
 .news__item-text > p {margin-bottom: 5px;}
 .news__item-text > p:last-of-type {margin: 0;}

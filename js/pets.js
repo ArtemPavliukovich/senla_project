@@ -1,4 +1,5 @@
-/* import css0 from '../css/pets/reset.css';
+'use strict'
+import css0 from '../css/pets/reset.css';
 import css1 from '../css/pets/font.css';
 import css2 from '../css/pets/general.css';
 import css3 from '../css/pets/header.css';
@@ -6,8 +7,9 @@ import css7 from '../css/pets/pets.css';
 import css13 from '../css/pets/footer.css';
 import css19 from '../css/pets/pet-info.css';
 import css15 from '../css/pets/form.css';
-import css18 from '../css/pets/preloader.css'; */
-'use strict'
+import css18 from '../css/pets/preloader.css';
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const database = [];
   let sort_database = [];

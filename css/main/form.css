@@ -392,8 +392,8 @@ input:focus ~ .form-label,
 
 .auto-help__datepicker {
   width: 267px;
-  background: url('../img/icon/datepick_null.svg') no-repeat 10px 12px, 
-              url('../img/icon/chevron_down.svg') no-repeat right 5px center;
+  background: url('../../img/icon/datepick_null.svg') no-repeat 10px 12px, 
+              url('../../img/icon/chevron_down.svg') no-repeat right 5px center;
   padding-left: 35px;
   padding-right: 30px;
   cursor: pointer;
@@ -401,18 +401,18 @@ input:focus ~ .form-label,
 }
 
 .auto-help__datepicker-bg-false-up {
-  background: url('../img/icon/datepick_null.svg') no-repeat 10px 12px, 
-              url('../img/icon/chevron_up.svg') no-repeat right 5px center;
+  background: url('../../img/icon/datepick_null.svg') no-repeat 10px 12px, 
+              url('../../img/icon/chevron_up.svg') no-repeat right 5px center;
 }
 
 .auto-help__datepicker-bg-true-up {
-  background: url('../img/icon/datepick_true.svg') no-repeat 10px 12px, 
-              url('../img/icon/chevron_up.svg') no-repeat right 5px center;
+  background: url('../../img/icon/datepick_true.svg') no-repeat 10px 12px, 
+              url('../../img/icon/chevron_up.svg') no-repeat right 5px center;
 }
 
 .auto-help__datepicker-bg-true-down {
-  background: url('../img/icon/datepick_true.svg') no-repeat 10px 12px, 
-              url('../img/icon/chevron_down.svg') no-repeat right 5px center;
+  background: url('../../img/icon/datepick_true.svg') no-repeat 10px 12px, 
+              url('../../img/icon/chevron_down.svg') no-repeat right 5px center;
 }
 
 .auto-help__time {width: 170px;}
@@ -431,8 +431,8 @@ input:focus ~ .form-label,
 .auto-help__add-date-circle {
   width: 20px;
   height: 20px;
-  background: url('../img/icon/plus.svg') no-repeat center, #F3B401;
-  background: url('../img/icon/plus.svg') no-repeat center,
+  background: url('../../img/icon/plus.svg') no-repeat center, #F3B401;
+  background: url('../../img/icon/plus.svg') no-repeat center,
               linear-gradient(155.32deg, #FFD868 13.8%, #F3B401 90.56%);
   box-shadow: 2px 2px 4px rgba(206, 206, 206, 0.25);
   border-radius: 50%;
@@ -442,7 +442,7 @@ input:focus ~ .form-label,
 }
 
 .auto-help__add-date-circle-disable {
-  background: url('../img/icon/plus.svg') no-repeat center, #D6D6D6;
+  background: url('../../img/icon/plus.svg') no-repeat center, #D6D6D6;
   width: 20px;
   height: 20px;
   box-shadow: 2px 2px 4px rgba(206, 206, 206, 0.25);
@@ -453,14 +453,14 @@ input:focus ~ .form-label,
 }
 
 .can-hover .auto-help__add-date-circle:hover {
-  background: url('../img/icon/plus.svg') no-repeat center, #E2A700;
-  background: url('../img/icon/plus.svg') no-repeat center,
+  background: url('../../img/icon/plus.svg') no-repeat center, #E2A700;
+  background: url('../../img/icon/plus.svg') no-repeat center,
               linear-gradient(155.32deg, #FFEAAF 13.8%, #F3B401 51.37%, #E2A700 87.76%);
 }
 
 .body .auto-help__add-date-circle:active {
-  background: url('../img/icon/plus.svg') no-repeat center, #FFEAAF;
-  background: url('../img/icon/plus.svg') no-repeat center,
+  background: url('../../img/icon/plus.svg') no-repeat center, #FFEAAF;
+  background: url('../../img/icon/plus.svg') no-repeat center,
               linear-gradient(155.32deg, #E2A700 13.8%, #F3B401 51.37%, #FFEAAF 90.56%);
 }
 
@@ -489,8 +489,8 @@ input:focus ~ .form-label,
 }
 
 .auto-help__input:checked ~ .auto-help__checkbox {
-  background: url('../img/icon/ok.svg') no-repeat center, #F4B500;
-  background: url('../img/icon/ok.svg') no-repeat center,
+  background: url('../../img/icon/ok.svg') no-repeat center, #F4B500;
+  background: url('../../img/icon/ok.svg') no-repeat center,
               linear-gradient(168.69deg, #FFD96F -1.56%, #FFC82B 52.74%, #F4B500 93.23%);
 }
 
@@ -541,7 +541,7 @@ input:focus ~ .form-label,
 }
 
 .ok__bg {
-  background: url('../img/icon/ok_big.svg');
+  background: url('../../img/icon/ok_big.svg');
   width: 63px;
   height: 48px;
   margin: 0 auto;

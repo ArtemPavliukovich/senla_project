@@ -1,35 +1,26 @@
-/* import css0 from '../css/reset.css';
-import css1 from '../css/font.css';
-import css2 from '../css/general.css';
-import css3 from '../css/header.css';
-import css4 from '../css/life.css';
-import css5 from '../css/promo.css';
-import css6 from '../css/help.css';
-import css7 from '../css/pets.css';
-import css8 from '../css/finance.css';
-import css9 from '../css/action.css';
-import css10 from '../css/news.css';
-import css11 from '../css/about.css';
-import css12 from '../css/thanks.css';
-import css13 from '../css/footer.css';
-import css14 from '../css/img.css';
-import css15 from '../css/form.css';
-import css16 from '../css/datepicker.css';
-import css17 from '../css/datepicker_custom.css';
-import css18 from '../css/animation.css';
-import css19 from '../css/pet-info.css';
-import img0 from '../img/i-am.png';
-import img1 from '../img/icon/home.svg';
-import img2 from '../img/best.png';
-import img3 from '../img/friend.png';
-import img4 from '../img/icon/finance.svg';
-import img5 from '../img/icon/care.svg';
-import img6 from '../img/icon/food.svg';
-import img7 from '../img/icon/delivery.svg';
-import img8 from '../img/icon/arrow.svg';
-import img9 from '../img/icon/icon_map.svg';
-import img10 from '../img/icon/icon_map-active.svg'; */
 'use strict';
+import css0 from '../css/main/reset.css';
+import css1 from '../css/main/font.css';
+import css2 from '../css/main/general.css';
+import css3 from '../css/main/header.css';
+import css4 from '../css/main/life.css';
+import css5 from '../css/main/promo.css';
+import css6 from '../css/main/help.css';
+import css7 from '../css/main/pets.css';
+import css8 from '../css/main/finance.css';
+import css9 from '../css/main/action.css';
+import css10 from '../css/main/news.css';
+import css11 from '../css/main/about.css';
+import css12 from '../css/main/thanks.css';
+import css13 from '../css/main/footer.css';
+import css14 from '../css/main/img.css';
+import css15 from '../css/main/form.css';
+import css16 from '../css/main/datepicker.css';
+import css17 from '../css/main/datepicker_custom.css';
+import css18 from '../css/main/animation.css';
+import css19 from '../css/main/pet-info.css';
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const database = [];
   let pet_object = '';
@@ -86,16 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-
-    if (window.pageYOffset - document.querySelector('.news__title').offsetTop > -350) {
-      document.querySelectorAll('.news__item').forEach((elem, i) => {
-        if (!elem.classList.contains('news__item-animation')) {
-          elem.style.transition = `all ${i / 4 + 0.6}s ease`;
-          elem.classList.add('news__item-animation');
-          elem.addEventListener('transitionend', () => elem.style.transition = '');
-        }
-      });
-    }
   });
 
 
@@ -120,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkTouch();
     
     if (document.querySelector('.active')) positionForm(document.querySelector('.active'));
+
     if (!document.querySelector('.pet-info').classList.contains('display-none')) {
       positionForm(document.querySelector('.pet-info'));
     }
@@ -199,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.target.closest('.datepicker').classList.forEach((elem) => {
         if (/datepicker\d/.test(elem)) id = elem;
       });
+
       const date = e.target.closest('.date');
       $(`#${id}`).datepicker().data('datepicker').removeDate(new Date(date.dataset.date_value));
       date.remove();
@@ -375,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (e.target.getAttribute('tabindex') == 3 && document.querySelector('.active.auto-help')) {
-        document.querySelector('.auto-help__datepicker').click();
+        if (!e.shiftKey) document.querySelector('.auto-help__datepicker').click();
       }
 
       if (e.target.getAttribute('tabindex') == 13 && document.querySelector('.active.auto-help')) {
@@ -440,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (e.target.classList.contains('mobile') && !e.target.value == '') {
-      mask_value = e.target.inputmask.unmaskedvalue();
+      let mask_value = e.target.inputmask.unmaskedvalue();
 
       if (mask_value.length >= 2 && !/(44)|(25)|(33)|(29)/.test(mask_value.slice(0, 2))) {
         showErrorMessage('Неверные цифры в скобках');
@@ -1174,7 +1157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* Слайдер, цифры в конце описания функций = последовательность вызова их при итерации слайдера (1)*/
+  /* Слайдер, цифры в конце описания функций = последовательность вызова их при итерации слайдера (1) */
   function nextCard(e) {
     let direction;
 
@@ -1395,9 +1378,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    swipe_start_x = 0, 
-    swipe_start_y = 0, 
-    swipe_move_x = [], 
+    swipe_start_x = 0; 
+    swipe_start_y = 0;
+    swipe_move_x = []; 
     swipe_move_y = [];
   }
 
@@ -1506,8 +1489,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-    
-   
+     
   /* Закрытие hint карты */
   /* function closeHint(placemark, hint, map) {
     if (hint.classList.contains('place-info-active')) {

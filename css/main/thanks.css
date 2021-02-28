@@ -39,7 +39,7 @@
   height: 89px;
   bottom: -8px;
   right: -96px;
-  background: url('../img/icon/step.svg');
+  background: url('../../img/icon/step.svg');
 }
 
 @media screen and (max-width: 1269px) {
