@@ -7,9 +7,31 @@
     <link rel="shortcut icon" href="img/icon/home.svg" type="image/x-icon">
   </head>
   <body class="body">
+    <div class="preloader">
+      <svg id="svg-sprite">
+        <symbol id="paw" viewBox="0 0 249 209.32">
+          <ellipse cx="27.917" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
+          <ellipse cx="84.75" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
+          <ellipse cx="162" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
+          <ellipse cx="221.083" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
+          <path stroke-width="0" d="M43.98 165.39s9.76-63.072 76.838-64.574c0 0 71.082-6.758
+          83.096 70.33 0 0 2.586 19.855-12.54 31.855 0 0-15.75 17.75-43.75-6.25 0 
+          0-7.124-8.374-24.624-7.874 0 0-12.75-.125-21.5 6.625 0 0-16.375 18.376-37.75 
+          12.75 0 0-28.29-7.72-19.77-42.86z"/>
+        </symbol>
+      </svg>
+      <div class="ajax-loader">
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+      </div>
+    </div>
     <div class="pets__wrapper">
       <header class="header">
-        <a href="index.html" class="go-back">
+        <a href="index.html#pets" class="go-back">
           <span class="header__go-back-arrow"></span>
           <span class="header__go-back">Вернуться назад</span>
         </a>
@@ -34,27 +56,27 @@
       <div class="flex-layout justify-content-space-between">
         <ul class="footer__list-one">
           <li class="footer__list-one-item footer__list-one-first_item">
-            <a href="index.html" class="footer__link" id="home">Дом или передержка</a>
+            <a href="index.html#home" class="footer__link">Дом или передержка</a>
           </li>
           <li class="footer__list-one-item footer__list-one-second_item">
-            <a href="index.html" class="footer__link" id="finance">Финансовая поддержка</a>
+            <a href="index.html#finance" class="footer__link">Финансовая поддержка</a>
           </li>
           <li class="footer__list-one-item footer__list-one-third_item">
-            <a href="index.html" class="footer__link" id="other-help">Корма, лекарства и другие вещи</a>
+            <a href="index.html#other-help" class="footer__link">Корма, лекарства и другие вещи</a>
           </li>
           <li class="footer__list-one-item footer__list-one-fourth_item">
-            <a href="index.html" class="footer__link" id="auto">Автопомощь</a>
+            <a href="index.html#auto" class="footer__link">Автопомощь</a>
           </li>
           <li class="footer__list-one-item footer__list-one-fifth_item">
-            <a href="index.html" class="footer__link" id="volunteer">Волонтерство</a>
+            <a href="index.html#volunteer" class="footer__link">Волонтерство</a>
           </li>
         </ul>
         <ul class="footer__list-two">
           <li class="footer__list-two-item">
-            <a href="index.html" class="footer__link" id="about">О нас</a>  
+            <a href="index.html#about" class="footer__link">О нас</a>  
           </li>
           <li class="footer__list-two-item">
-            <a href="index.html" class="footer__link" id="contacts">Контакты</a>  
+            <a href="index.html#contacts" class="footer__link">Контакты</a>  
           </li>
         </ul>
         <p class="footer__we">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</p>
@@ -196,28 +218,6 @@
             </span>
           </a>
         </div>
-      </div>
-    </div>
-    <div class="preloader">
-      <svg id="svg-sprite">
-        <symbol id="paw" viewBox="0 0 249 209.32">
-          <ellipse cx="27.917" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
-          <ellipse cx="84.75" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
-          <ellipse cx="162" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
-          <ellipse cx="221.083" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
-          <path stroke-width="0" d="M43.98 165.39s9.76-63.072 76.838-64.574c0 0 71.082-6.758
-          83.096 70.33 0 0 2.586 19.855-12.54 31.855 0 0-15.75 17.75-43.75-6.25 0 
-          0-7.124-8.374-24.624-7.874 0 0-12.75-.125-21.5 6.625 0 0-16.375 18.376-37.75 
-          12.75 0 0-28.29-7.72-19.77-42.86z"/>
-        </symbol>
-      </svg>
-      <div class="ajax-loader">
-        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-        <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
       </div>
     </div>
     <svg display="none">

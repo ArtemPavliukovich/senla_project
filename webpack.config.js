@@ -1,50 +1,70 @@
+const isDevelopment = process.env.NODE_ENV === 'development';
+
+const getFileName = (type = '[ext]') => isDevelopment ? `[name]${type}` : `[name].[contenthash]${type}`;
+
 const path = require('path');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const TinyimgPlugin = require('tinyimg-webpack-plugin');
+const TinyImgPlugin = require('tinyimg-webpack-plugin');
 
 module.exports = {
-  mode: 'none',
+  mode: isDevelopment ? 'development' : 'production',
   entry: {
-    main: './js/functional.js',
-    pets: './js/pets.js'
+    main: isDevelopment ? [
+      'webpack-dev-server/client?http://localhost:9001',
+      'webpack/hot/dev-server',
+      './js/functional.js'
+    ] : './js/functional.js',
+    pets: isDevelopment ? [
+      'webpack-dev-server/client?http://localhost:9001',
+      'webpack/hot/dev-server',
+      './js/pets.js'
+    ] : './js/pets.js'
   },
   output: {
-    filename: './js/[name].[contenthash].js',
-    path: path.resolve(__dirname, 'ready'),
+    filename: `./js/${getFileName('.js')}`,
+    path: path.resolve(__dirname, 'app'),
     publicPath: ''
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'app'),
+    open: true,
+    compress: true,
+    hot: true,
+    port: 9001
+  },
+  devtool: isDevelopment ? 'source-map' : false,
   plugins: [
     new HTMLWebpackPlugin({
       filename: 'index.html',
       template: './index.html',
       chunks: ['main'],
-      minify: {collapseWhitespace: true}
+      minify: {collapseWhitespace: !isDevelopment}
     }),
     new HTMLWebpackPlugin({
       filename: 'pets.html',
       template: './pets.html',
       chunks: ['pets'],
-      minify: {collapseWhitespace: true}
+      minify: {collapseWhitespace: !isDevelopment}
     }),
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: ({chunk}) => `./css/${chunk.name}/[name].[contenthash].css`
+      filename: ({chunk}) => `./css/${chunk.name}/${getFileName('.css')}`
     }),
-    new TinyimgPlugin({
-      enabled: true,
+    new TinyImgPlugin({
+      enabled: !isDevelopment,
       logged: true
     }),
+    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        {from: './src', to: path.resolve(__dirname, 'ready/src')},
-        {from: './img/database-img', to: path.resolve(__dirname, 'ready/img/database-img')},
-        {from: './img/icon/icon_map.svg', to: path.resolve(__dirname, 'ready/img/icon/')},
-        {from: './img/icon/icon_map-active.svg', to: path.resolve(__dirname, 'ready/img/icon/')}
+        {from: './src', to: path.resolve(__dirname, 'app/src')},
+        {from: './img/database-img', to: path.resolve(__dirname, 'app/img/database-img')},
+        {from: './img/icon/icon_map.svg', to: path.resolve(__dirname, 'app/img/icon/')},
+        {from: './img/icon/icon_map-active.svg', to: path.resolve(__dirname, 'app/img/icon/')}
       ]
     })
   ],
@@ -54,7 +74,9 @@ module.exports = {
         test: /\.css$/i,
         use: [{
           loader: MiniCssExtractPlugin.loader,
-          options: {
+          options: isDevelopment ? {
+            publicPath: '/'
+          } : {
             publicPath: (resourcePath, context) => {
               return path.relative(path.dirname(resourcePath), context) + '/';
             }
@@ -74,6 +96,11 @@ module.exports = {
                   tag: 'img',
                   attribute: 'src',
                   type: 'src'
+                },
+                {
+                  tag: 'link',
+                  attribute: 'href',
+                  type: 'src'
                 }
               ]
             },
@@ -90,27 +117,27 @@ module.exports = {
         test: /\.(?:|png|jpg|jpeg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: './img/[name].[contenthash].[ext]'
+          filename: `./img/${getFileName()}`
         }
       },
       {
         test: /\.(?:|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: './img/icon/[name].[contenthash].[ext]'
+          filename: `./img/icon/${getFileName('.svg')}`
         }
       },
       {
         test: /\.(?:|woff2|woff)$/i,
         type: 'asset/resource',
         generator: {
-          filename: './fonts/[name].[contenthash].[ext]'
+          filename: `./fonts/${getFileName()}`
         }
       }
     ]
   },
   optimization: {
-    minimize: true,
+    minimize: !isDevelopment,
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserWebpackPlugin()

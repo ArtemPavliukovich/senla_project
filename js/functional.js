@@ -17,9 +17,8 @@ import css14 from '../css/main/img.css';
 import css15 from '../css/main/form.css';
 import css16 from '../css/main/datepicker.css';
 import css17 from '../css/main/datepicker_custom.css';
-import css18 from '../css/main/animation.css';
 import css19 from '../css/main/pet-info.css';
-
+//import html from '../index.html';
 
 document.addEventListener('DOMContentLoaded', () => {
   const database = [];
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (body.classList.contains('can-hover')) body.classList.remove('can-hover');
     if (!(navigator.maxTouchPoints > 0)) body.classList.add('can-hover');
   }
-  checkTouch();
+  checkTouch(); 
 
 
   /* Функция получения базы данных всех животных  */
@@ -51,33 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
   }
   getDatabase();
-
-
-  /* Переход к соответствующему пункту если переходим с другой страницы */
-  window.addEventListener('load', () => {
-    let id = localStorage.getItem('id');
-    
-    if (id) {
-      localStorage.removeItem('id');
-      setTimeout(function () {
-        window.scrollTo(0, document.getElementById(id).getBoundingClientRect().y);
-      }, 1);
-    }
-  });
-
-
-  /* Анимации */
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset - document.querySelector('.help__title').offsetTop > -350) {
-      document.querySelectorAll('.help__button').forEach((elem, i) => {
-        if (!elem.classList.contains('help__button-animation')) {
-          elem.style.transition = `all ${i / 4 + 0.25}s ease`;
-          elem.classList.add('help__button-animation');
-          elem.addEventListener('transitionend', () => elem.style.transition = '');
-        }
-      });
-    }
-  });
 
 
   /* Перестраиваем меню/формы/модалки при rezise и перепроверяем touch */
@@ -105,9 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!document.querySelector('.pet-info').classList.contains('display-none')) {
       positionForm(document.querySelector('.pet-info'));
     }
-    
-    if (document.querySelector('.map-active')) positionForm(document.getElementById('map'));
   });
+
+
+  // Оптимизация загрузки карты
+  window.addEventListener('load', loadMap);
+
+  function loadMap() {
+    setTimeout(() => {
+      const map = document.createElement('script');
+      map.src = 'https://api-maps.yandex.ru/2.1/?apikey=11231cb4-9f02-4c84-a90c-52281eff0498&load=package.standard&lang=ru_RU';
+      document.body.appendChild(map);
+      window.removeEventListener('load', loadMap);
+    }, 2000);
+  }
 
 
   /* Каждый клик по крестику, кнопке отмена или клик по темному фону закрывает форму и очищает её,
@@ -255,9 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.pet__slider-item').addEventListener('click', nextCard);
   document.querySelector('.pet__slider').addEventListener('mouseover', mouseOverCard);
   document.querySelector('.pet__slider').addEventListener('mouseout', mouseOutCard);
-  document.querySelector('.pet__slider').addEventListener('touchstart', swipeCardStart);
-  document.querySelector('.pet__slider').addEventListener('touchmove', swipeCardMove);
-  document.querySelector('.pet__slider').addEventListener('touchend', swipeCardEnd);
+  document.querySelector('.pet__slider').addEventListener('touchstart', swipeCardStart, {passive: true});
+  document.querySelector('.pet__slider').addEventListener('touchmove', swipeCardMove, {passive: true});
+  document.querySelector('.pet__slider').addEventListener('touchend', swipeCardEnd, {passive: true});
   document.querySelector('.pet__slider').addEventListener('click', miniSliderActive);
 
   document.querySelector('.pet__slider-item').addEventListener('keydown', (e) => {
@@ -734,7 +717,8 @@ document.addEventListener('DOMContentLoaded', () => {
       datepicker.setAttribute('src', 'src/datepicker.min.js');
       document.body.appendChild(jquery);
       document.body.appendChild(datepicker);
-      datepicker.addEventListener('load', createDatePicker);
+      createDatePicker();
+      datepicker.addEventListener('load', activateDatapicker);
     } 
   });
 
@@ -945,7 +929,7 @@ document.addEventListener('DOMContentLoaded', () => {
       createTultip(e, true);
       setTimeout(deleteTultip, 1500);
     }
-  });
+  }, {passive: true});
 
 
   /* Удаление тултипа */
@@ -1086,6 +1070,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Создание датапикеров */
   function createDatePicker(e) {
     const datepicker_num = document.querySelector('.auto-help__datepick-box').children.length;
+  
     if (datepicker_num < 14) {
       let container = document.createElement('div');
       container.setAttribute('data-num_picker', datepicker_num);
@@ -1103,28 +1088,36 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>`;
       container.classList.add('datapicker-container');
       document.querySelector('.auto-help__datepick-box').appendChild(container);
-
-      $(`#datepicker${datepicker_num}`).datepicker({
-        range: true,
-        dateFormat: 'dd M yyyy',
-        multipleDatesSeparator: ' - ',
-        showOtherMonths: false,
-        offset: 0,
-        minDate: new Date(),
-        prevHtml: '<div class="datepicker-left"></div>',
-        nextHtml: '<div class="datepicker-right"></div>',
-        navTitles: {days: 'MM <i>yyyy</i>'},
-        disableNavWhenOutOfRange: false,
-        onHide: closeDatepicker,
-        onSelect: changeBoxDate,
-        classes: `datepicker${datepicker_num}`,
-        showEvent: 'click'
-      });
-
-      createSwitch(`datepicker${datepicker_num}`);
     }
 
-    disableAddDatapicker(e.target);
+    if (e) {
+      disableAddDatapicker(e.target);
+      activateDatapicker();
+    }
+  }
+
+
+  function activateDatapicker() {
+    const datepicker_num = document.querySelector('.auto-help__datepick-box').children.length - 1;
+
+    $(`#datepicker${datepicker_num}`).datepicker({
+      range: true,
+      dateFormat: 'dd M yyyy',
+      multipleDatesSeparator: ' - ',
+      // showOtherMonths: false,
+      offset: 0,
+      minDate: new Date(),
+      prevHtml: '<div class="datepicker-left"></div>',
+      nextHtml: '<div class="datepicker-right"></div>',
+      navTitles: {days: 'MM <i>yyyy</i>'},
+      disableNavWhenOutOfRange: false,
+      onHide: closeDatepicker,
+      onSelect: changeBoxDate,
+      classes: `datepicker${datepicker_num}`,
+      showEvent: 'click'
+    });
+
+    createSwitch(`datepicker${datepicker_num}`);
   }
 
 
@@ -1421,11 +1414,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         {'src':'Беларусь, Гродно, ул. Пушкина, 31а', 'name':'Зоомаркет «Зообазар»'},
                         {'src':'Беларусь, Гродно, ул. Тимирязева, 8', 'name':'Гипермаркет «Евроопт»'},
                         {'src':'Беларусь, Гродно, ул. Янки Купалы, 82А', 'name':'Гипермаркет «Евроопт»'},
-                        {'src':'Беларусь, Гродно, ул. Подольная, д.37', 'name':'Фитнес-центр «АДРЕНАЛИН»'} ]
+                        {'src':'Беларусь, Гродно, ул. Подольная, д.37', 'name':'Фитнес-центр «АДРЕНАЛИН»'} ];
   
       const map = new ymaps.Map('map', {center: [53.682, 23.835], 
                                         zoom: 13,
                                         controls: ['searchControl', 'zoomControl']});
+
+      const placemarks = [];
   
       document.querySelector('.ymaps-2-1-78-map-copyrights-promo').remove();
       document.querySelector('.ymaps-2-1-78-copyright_logo_no').remove();
@@ -1452,51 +1447,67 @@ document.addEventListener('DOMContentLoaded', () => {
             iconContentSize: [30, 30],
             number: i + 1
           });
-  
-          let number = placemark.options.get('number');
-  
-          placemark.events.add('mouseenter', () => {
-            placemark.options.set({iconImageHref: '../img/icon/icon_map-active.svg'});
-            document.querySelector(`.place-info[data-number="${number}"]`).classList.add('place-info-active');
-          });
-  
-          placemark.events.add('mouseleave', () => {
-            placemark.options.set({iconImageHref: '../img/icon/icon_map.svg'});
-            document.querySelector(`.place-info[data-number="${number}"]`).classList.remove('place-info-active');
-          });
-  
-          /* placemark.events.add('click', (e) => {
-            const hint = document.querySelector(`.place-info[data-number="${number}"]`);
-  
-            if (!document.body.classList.contains('can-hover')) {
-  
-              if (hint.classList.contains('place-info-active')) {
-                closeHint(placemark, hint);
-              } else {
-                placemark.options.set({iconImageHref: '../img/icon/icon_map-active.svg'});
-                hint.classList.add('place-info-active');
-                closeHint = closeHint.bind(null, placemark, hint, map);
-                document.body.addEventListener('click', closeHint);
-                map.events.add('click', closeHint);
+
+          let openThisHint = openHint.bind(null, placemark),
+              closeThisHint = closeHint.bind(null, placemark);
+
+          placemarks.push(placemark);
+          
+          if (document.body.classList.contains('can-hover')) {
+            placemark.events.add('mouseenter', openThisHint);
+            placemark.events.add('mouseleave', closeThisHint);
+          } else {
+            placemark.events.add('click', () => {
+              const openedHint = [...document.querySelectorAll('.place-info-active')].filter(el => {
+                return el.dataset.number != placemark.options.get('number');
+              })[0];
+          
+              if (openedHint) {
+                closeHint(placemarks.filter((el) => openedHint.dataset.number == el.options.get('number'))[0]);
               }
-              
-            }
-          }); */
-  
+             
+              const hint = document.querySelector(`.place-info[data-number="${placemark.options.get('number')}"]`);
+              hint.classList.contains('place-info-active') ? closeThisHint() : openThisHint();
+            });
+          }
+
           map.geoObjects.add(placemark);
         });
+      });
+      
+      document.body.addEventListener('click', () => {
+        const activePlacemark = document.querySelector('.place-info-active');
+        
+        if (activePlacemark && !document.body.classList.contains('can-hover')) {
+          closeHint( placemarks.filter(el => activePlacemark.dataset.number == el.options.get('number'))[0] );
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        const mapContainer = document.querySelector('#map');
+
+        if (mapContainer.children.length > 1) {
+          if (mapContainer.classList.contains('map-active')) document.querySelector('#disable-fon').click();
+          map.destroy();
+          console.clear();
+        }
       });
     });
   }
   
+
+  /* Открытие hint */
+  function openHint(placemark) {
+    const hint = document.querySelector(`.place-info[data-number="${placemark.options.get('number')}"]`);
+    placemark.options.set({iconImageHref: '../img/icon/icon_map-active.svg'});
+    hint.classList.add('place-info-active');
+  }
+
      
   /* Закрытие hint карты */
-  /* function closeHint(placemark, hint, map) {
-    if (hint.classList.contains('place-info-active')) {
-      placemark.options.set({iconImageHref: '../img/icon/icon_map.svg'});
-      hint.classList.remove('place-info-active');
-      document.body.removeEventListener('click', closeHint);
-      map.events.remove('click', closeHint);
-    }
-  } */
+  function closeHint(placemark) {
+    const hint = document.querySelector(`.place-info[data-number="${placemark.options.get('number')}"]`);
+    placemark.options.set({iconImageHref: '../img/icon/icon_map.svg'});
+    hint.classList.remove('place-info-active');
+  }
 });

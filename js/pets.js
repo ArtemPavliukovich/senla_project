@@ -8,17 +8,36 @@ import css13 from '../css/pets/footer.css';
 import css19 from '../css/pets/pet-info.css';
 import css15 from '../css/pets/form.css';
 import css18 from '../css/pets/preloader.css';
+//import html from '../pets.html';
 
 
 document.addEventListener('DOMContentLoaded', () => {
   const database = [];
   let sort_database = [];
   let pet_object = '';
+  let min_time_preload = Date.now();
 
-  window.addEventListener('load', () => {
-    document.querySelector('.preloader').classList.add('display-none');
-  });
 
+  function hidePreloader(e) {
+    const card_images = [...document.querySelectorAll('img[data-load')];
+    e.target.setAttribute('data-load', true);
+
+    if (card_images.every(el => el.dataset.load == 'true')) {
+      card_images.forEach(el => el.removeEventListener('load', hidePreloader));
+      
+      if (Date.now() - min_time_preload < 1500) {
+        setTimeout(deletePreloader, 1500 - (Date.now() - min_time_preload));
+      } else {
+        deletePreloader();
+      }
+    }
+  }
+
+
+  function deletePreloader() {
+    document.querySelector('.preloader').remove();
+  }
+    
 
   function checkTouch() {
     let body = document.body;
@@ -40,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Автоматическая подгрузка контента */
   window.addEventListener('scroll', (e) => {
-    if (document.querySelector('.footer').getBoundingClientRect().y < 1000) {
+    if (document.querySelector('.footer').getBoundingClientRect().y < 1200) {
       addNextCard();
     }
-  });
+  }, {passive: true});
 
 
   function getDatabase() {
@@ -52,18 +71,27 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((data) => {
           data.forEach(elem => database.push(elem));
           sortPets();
-          for (let i = 0; i < 11; i++) addCard(database[i]);
+          for (let i = 0; i < 11; i++) addCard(database[i], true);
         });
   }
   getDatabase();
 
 
   /* Добавление на страницу */
-  function addCard(pet) {
-    let pet_card = document.createElement('div');
+  function addCard(pet, firstLoad = false) {
+    const pet_card = document.createElement('div');
+
     pet_card.innerHTML = createCard(pet);
+
+    if (firstLoad) {
+      const pet_card_img = pet_card.querySelector('img');
+      pet_card_img.setAttribute('data-load', false);
+      pet_card_img.addEventListener('load', hidePreloader);
+    }
+
     pet_card.classList.add('pet__card');
     pet_card.setAttribute('data-id', pet.id);
+
     document.querySelector('.all-animals').appendChild(pet_card);
   }
 
@@ -162,11 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setValueFilter(e);
       showFilterItem();
       document.querySelector('.filter-value').blur();
-    }
-
-    /* при клике по ссылкам футера возвращаемся на главную страницу к определенному разделу */
-    if (e.target.classList.contains('footer__link')) {
-      localStorage.setItem('id', e.target.getAttribute('id'));
     }
 
     const attribute = e.target.closest('a[href]');
@@ -632,7 +655,7 @@ document.addEventListener('DOMContentLoaded', () => {
       createTultip(e, true);
       setTimeout(deleteTultip, 1500);
     }
-  });
+  }, {passive: true});
 
 
   /* Удаление тултипа */

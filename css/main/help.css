@@ -16,17 +16,6 @@
   width: 166px;
   font-weight: 500;
   color: #474747;
-  position: relative;
-  transform: translateY(200px);
-  opacity: 0;
-  transition: transform 0.05s ease-in;
-}
-.help__button-animation {
-  opacity: 1;
-  transform: translateY(0);
-}
-.can-hover .help__button:hover {
-  transform: scale(1.05);
 }
 
 .can-hover .help__button-link-description {cursor: pointer;}
