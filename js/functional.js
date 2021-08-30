@@ -1422,9 +1422,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const placemarks = [];
   
-      document.querySelector('.ymaps-2-1-78-map-copyrights-promo').remove();
-      document.querySelector('.ymaps-2-1-78-copyright_logo_no').remove();
-  
       address.forEach((elem, i) => {
         let geocoder = ymaps.geocode(elem.src);
   
